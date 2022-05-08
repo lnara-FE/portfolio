@@ -1,0 +1,244 @@
+@charset "utf-8";
+
+/* countrynow 2019.04 */
+@import url("//news.chosun.com/dhtm/css/css_reset_2018.css");
+@import url("//fonts.googleapis.com/earlyaccess/notosanskr.css");
+
+ 
+/* float 해제 - 가상클래스 */
+.clear_fix:after {content:""; clear: both; display: block;}
+
+/* global */
+body, input, button, textarea {color: #000; font-family: 맑은 고딕, 'Malgun Gothic', AppleSDGothicNeo-Regular, 나눔고딕, 'Noto Sans KR', 돋움, Dotum, 굴림, Gulim, sans-serif;}
+a,a:visited{color: #000; text-decoration:none;}
+
+#wrapper {letter-spacing: -1px; line-height: 1.5em;}
+dt {line-height: 1.3em}
+
+/* .main_header top ad area */
+.ad_top {width: 970px; margin: 0 auto; text-align: center; font-size: 0;}
+.ad_top a {font-size: 0;}
+.ad_top a img {padding: 40px 0;}
+.csmgsgnb_wrap {display: block;}
+
+/* .main_header */
+.main_header {position: relative; height: 745px; background-color: #2092F3;}
+.main_header::after {content:''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url("//image.chosun.com/pan_countrynow/images/main_bg.png") 50% 15% no-repeat; z-index: 1;}
+.main_header .inner {width: 1200px; height: 100%; margin: 0 auto;}
+.main_header .inner .chosun_logo {display: none;}
+.main_header .inner .cn_title {position: relative; width: 187px; height: 54px; padding-top: 20px; text-indent: -9999px; z-index: 9999;}
+.main_header .inner .cn_title>a {display: block; width: 100%; height: 100%; font-size: 0; background: url("//image.chosun.com/pan_countrynow/images/logo.png") no-repeat;}
+.main_header .inner .cn_desc {width: 423px; height: 209px; margin-top: 62px; background: url("//image.chosun.com/pan_countrynow/images/bg_letter.png") no-repeat; background-size: 100%;}
+.main_header .inner .cn_desc>span {display: inline-block; width: 100%; height: 100%; text-indent: -9999px;}
+.main_header .inner .cn_slide_wrap {position: absolute; top: 382px; left: 0; z-index: 99999;}
+.main_header .inner .item {position: relative; width: 300px; height: 240px; margin: 0 17px; background-color: #005fca; transition: all 0.5s ease;}
+.main_header .inner .item>a {display: block; width: 100%; height: 100%; color: #fff;}
+.main_header .inner .item dl {height: 100%; transition: all 0.5s ease;}
+.main_header .inner .item dl dd.thumb {position: relative; height: 240px; transition: all 0.5s ease;} 
+.main_header .inner .item dl dd.thumb img {position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: block; width: 100%; margin: auto; transition: all 0.5s ease;}
+.main_header .inner .item dl dd.thumb::after {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #002a59; opacity: 0.5; transition: all 0.5s ease;} 
+/* thumb opacity bg */
+.main_header .inner .item dl dd.cate {position: absolute; top: 36px; left: 20px; min-width: 74px; max-height: 36px; margin-right: 20px; line-height: 2.35; font-size: 14px; text-align :center; border: 2px solid #fff; border-radius: 18px; transition: all 0.5s ease;}
+.main_header .inner .item dl dt {position: absolute; top: 92px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; height: 2.9em; padding: 0 20px; line-height: 1.45; font-size: 24px; transition: all 0.5s ease; overflow: hidden; z-index: 9;}
+.main_header .inner .item:hover {width: 400px !important; cursor: pointer;}
+.main_header .inner .item:hover dl dt {top: 162px; font-size: 20px; line-height: 1.6; font-weight: bold;}
+.main_header .inner .item:hover dl dd.cate {top: 114px;}
+.main_header .inner .item:hover dl dd.thumb img {max-width: 400px; max-height: 300px;}
+.main_header .inner .item:hover dl dd.thumb::after {background: url("//image.chosun.com/pan_countrynow/images/bk_gra.png") repeat; background-position: left bottom;}
+
+/* countrynow .main_headerbxslider tune */
+.bx-wrapper {max-width: 100% !important; margin-bottom: 0; box-shadow: none; -webkit-box-shadow: none; border: none; background: none;}
+#page_control {position: relative; margin: 48px 0; text-align: center; font-size: 0;}
+#page_control>a {display: inline-block; width: 24px; height: 24px; background: url("//image.chosun.com/pan_countrynow/images/ic_rolling.png") no-repeat;}
+#page_control>a.slide-prev {background-position: 4px 2px; margin-right: 20px;}
+#page_control>a.slide-next {background-position: -77px 2px; margin-left: 20px;}
+#page_control>a.slide-stop {background-position: -22px 2px;}
+#page_control>a.slide-play {background-position: -51px 2px;}
+
+/* countrynow main section */
+section {max-width: 1200px; margin: 0 auto; padding-top: 100px; font-size: 20px; color: #222; text-align: left; box-sizing: border-box;}
+section h2 {font-size: 40px; margin-bottom: 40px; line-height: 1.3em; text-align: center;} 
+section h2>a:hover {text-decoration: none;}
+section h2 span.blue {color: #005fca;} 
+section #list_news {padding-top: 42px; padding-bottom: 40px;}
+section #list_news h2 {margin-bottom: 50px;}
+
+.tab_wrapper ul {margin: 20px 0 40px; text-align: center; font-size: 0;}
+.tab_wrapper ul li {position: relative; display: inline-block; font-size: 20px; color: #222;}
+.tab_wrapper ul li::after {content: ''; position: absolute; top: 40px; left: 0; bottom: 0; display: block; width: 0; height: 5px; margin: auto; background: #005fca; -webkit-transition: ease all 0.3s ; -moz-transition: ease all 0.3s ; -ms-transition: ease all 0.3s ; -o-transition: ease all 0.3s ; transition: ease all 0.4s ;}
+.tab_wrapper ul li+li {margin-left: 60px;}
+.tab_wrapper ul li a {line-height: 27px; text-decoration: none; -webkit-transition: ease all 0.4s; -moz-transition: ease all 0.4s; -ms-transition: ease all 0.4s; -o-transition: ease all 0.4s; transition: ease all 0.4s ; }
+.tab_wrapper ul li.current::after {width: 100%}
+.tab_wrapper ul li.current a {font-weight: bold; color: #005fca;}
+.tab_wrapper .tab-contents {display: none;}
+.tab_wrapper .tab-contents.current {display: block;}
+.tab_wrapper .tab-contents .news_item_wrap {overflow: hidden;}
+.tab_wrapper .tab-contents .news_item_wrap .news_item {float: left; width: 31.28%; margin-right: 3.08%; overflow: hidden; background-color: #f3f3f3; border: 1px solid #f3f3f3; font-size: 20px; box-sizing: border-box;}
+.tab_wrapper .tab-contents .news_item_wrap .news_item:nth-child(3n) {margin-right: 0;}
+.tab_wrapper .tab-contents .news_item_wrap .news_item dl {position: relative; height: 414px; overflow: hidden;}
+.tab_wrapper .tab-contents .news_item_wrap .news_item dl dt {font-size: 24px; font-weight: bold; padding: 30px 20px 0; box-sizing: border-box;} 
+.tab_wrapper .tab-contents .news_item_wrap .news_item dl dt>a{color: #005fca;}
+.tab_wrapper .tab-contents .news_item_wrap .news_item dl dd.thumb + dt {font-size: 20px;}
+.tab_wrapper .tab-contents .news_item_wrap .news_item dl dd.thumb {position: relative; width: 375px; height: 180px; overflow: hidden; background-repeat: no-repeat; background-size: cover;}
+.tab_wrapper .tab-contents .news_item_wrap .news_item dl dd.thumb:before {content:''; position: absolute; top: 0; left: 0; display: block; width: 100%; height: 100%; background: inherit; -webkit-filter: blur(5px); -moz-filter: blur(5px); -o-filter: blur(5px); -ms-filter: blur(5px); filter: blur(5px);}
+.tab_wrapper .tab-contents .news_item_wrap .news_item dl dd.thumb a {display: block; height: 100%;}
+.tab_wrapper .tab-contents .news_item_wrap .news_item dl dd.thumb a:before {content: ''; position: absolute; top: 0; left: 0; display: block; width: 375px; height: 180px; background: url("//image.chosun.com/search/2017_new/black_bg.png") repeat;}
+.tab_wrapper .tab-contents .news_item_wrap .news_item dl dd.thumb a img {position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: block; width: auto; max-width: 375px;  height: 180px; margin: auto;}
+.tab_wrapper .tab-contents .news_item_wrap .news_item dl dd.text {padding: 20px 20px; font-size: 14px; box-sizing: border-box; color: #999; overflow: hidden;}
+.tab_wrapper .tab-contents .news_item_wrap .news_item dl dd.text table {display: none;}
+.tab_wrapper .tab-contents .news_item_wrap .news_item:hover dl dt {text-decoration: underline;}
+.tab_wrapper .tab-contents .news_item_wrap .news_item:hover {border: 1px solid #005fca;}
+
+.cn_cont_left {float: left; width: 75%; padding-right: 2.5%; box-sizing: border-box;}
+.cn_cont_right {float: left; width: 25%;}
+.cn_cont_left dl {display: table; max-height: 120px; width: 100%; padding: 10px 0; font-size: 14px; border-bottom: 1px solid #eaeaea; overflow: hidden;}
+.cn_cont_left dl:first-child {padding-top: 0;}
+.cn_cont_left dl dd.thumb {display: table-cell; vertical-align: middle; max-width: 172px; padding-right: 15px;}
+.cn_cont_left dl dd.thumb a {display: block;}
+.cn_cont_left dl dd.thumb a img {display: block; width: auto; max-height: 100px; overflow: hidden;}
+.cn_cont_left dl dd.cont_cate {color: #005fca;}
+.cn_cont_left dl dt {font-size: 20px; font-weight: 600; overflow: hidden;}
+.cn_cont_left dl dd.news_text{color: #777; overflow: hidden; padding-top: 1px;}
+/* .cn_cont_left dl>div {display: table-cell; vertical-align: middle;} */
+.cn_cont_right .ad_right_top {position: relative; height: 250px; margin-bottom: 20px; text-align: center;}
+.cn_cont_right .ad_right_top a {display: block;}
+.cn_cont_right .ad_right_top a img {position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: block; width: auto; max-width: 300px; max-height: 250px; margin: auto;}
+.cn_cont_right .ad_right_bottom ul {text-align: center;}
+.cn_cont_right .ad_right_bottom ul li {position: relative; height: 80px; margin-bottom: 20px; border: 1px solid #eaeaea;}
+.cn_cont_right .ad_right_bottom ul li a {display: block;}
+.cn_cont_right .ad_right_bottom ul li a img {position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: auto; max-width: 300px; max-height: 80px; margin: auto;}
+
+/*모바일 광고 배너*/
+.section_ad {display: none;}
+
+/* setion area news_more */
+.news_more {padding-top: 15px; text-align: right; font-size: 0; clear: both;}
+.news_more>a{display: inline-block; font-size: 14px; color:#777; }
+
+/* article tune */
+.newsq_title {background: #fff; height: 245px;}
+.newsq_title h1 {word-break: keep-all; font-family: 'Noto Sans KR', serif; color: #000;}
+.newsq_title .news_title_text {width: 1085px; padding-bottom: 40px; border-bottom: 1px solid #d7d7d7;}
+.newsq_title .newsq_title_bg {background-size: 0; height: 245px;}
+.newsq_title .newsq_title_bg span {display: none;}
+.newsq_title .news_title_author a {color: #000; font-size: 15px;}
+.newsq_title .news_title_q em {color: #005fca; font-size: 28px;}
+.newsq_title .news_title_q em:before {display: none;}
+#csContent {width: 1085px;}
+.news_left_aside_sns>li:first-child,
+.news_left_aside_sns li a.count_cmt,
+.news_cmt { display: none;}
+.par {width: 862px;}
+.news_article {margin-left: 0;}
+
+/* article 최신뉴스 */
+.cn_art_latest_wrap {position: relative; width: 826px; margin: 0 auto; padding-top: 30px; border-top: solid 1px #d7d7d7; box-sizing: border-box;}
+.cn_art_latest_wrap h3 {margin-bottom: 20px; font-size: 20px;}
+.cn_art_latest_wrap .cn_art_latest {overflow: hidden;}
+.cn_art_latest_wrap dl {position: relative; float: left; width: 205px; height: 120px; margin-bottom: 20px; margin-left: 5px;}
+.cn_art_latest_wrap dl + dl {margin-left: 5px;}
+.cn_art_latest_wrap dl div {display: table; width: 100%; height: 100%; background: #f3f3f3; overflow: hidden;}
+.cn_art_latest_wrap dl dt {display: table-cell; vertical-align: middle; text-align: center; height: 2.6em; padding: 0 23px; font-size: 15px; font-weight: bold; overflow: hidden;}
+.cn_art_latest_wrap dl dd.thumb {position: relative; width: 205px; height: 120px; overflow: hidden;}
+.cn_art_latest_wrap dl dd.thumb::after {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url("//image.chosun.com/pan_countrynow/images/bk_gra.png") repeat; background-position: left bottom; background-size: cover; opacity: 0.5;}
+.cn_art_latest_wrap dl dd.thumb a {display: block; height: 100%;}
+.cn_art_latest_wrap dl dd.thumb a img {position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: auto; margin: auto;}
+.cn_art_latest_wrap dl dd.thumb+dt {position: absolute; top: 67px; left: 0; padding-left: 12px; text-align: left; font-weight: normal;}
+.cn_art_latest_wrap dl dd.thumb+dt a {color: #fff;}
+
+footer {display: block; text-align: center;}
+footer .copyright {padding: 40px 0; font-size: 13px; line-height: 1.5; color: #777;}
+
+@media all and (max-width: 1198px){
+  body, input, button, textarea {font-family: 'AppleSDGothicNeoR'; color: #000;}
+  .ad_top {display: none;}
+
+  #wrapper {letter-spacing: 0;}
+
+  .csmgsgnb_wrap {display: none;}
+  .main_header {height: 421px;}
+  .main_header::after {background-position: 66% 100%; opacity: 0.3;}
+  .main_header .inner {width: 100%;}
+  .main_header .inner .chosun_logo {display: block; width: 98px; height: 14px; padding-left: 20px; padding-top: 20px; font-size: 0;}
+  .main_header .inner .chosun_logo>a {display: block; width: 100%; height: 100%; background: url("//image.chosun.com/pan_countrynow/images/chosun_logo.png") no-repeat; background-size: 100%;}
+  .main_header .inner .cn_title {width: 118px; height: 32px; padding-left: 20px;}
+  .main_header .inner .cn_title>a {background-size: 100%;}
+  .main_header .inner .cn_desc {width: 203px; height: 95px; margin-top: 22px; margin-left: 20px;}
+  .main_header .inner .cn_slide_wrap {top: 220px;}
+  .main_header .inner .item {height: 140px; margin: 0 5px;}
+  .main_header .inner .item dl dd.thumb {height: 140px;} 
+  .main_header .inner .item dl dd.thumb img {height: 100%; max-width: 150px; max-height: 140px;}
+  .main_header .inner .item dl dd.cate {top: 24px; left: 12px; min-width: 50px;  max-height: 25px; margin-right: 12px; padding: 0 4px; line-height: 25px; border: 1px solid #fff;}
+  .main_header .inner .item dl dt {top: 59px; height: 2.66em; line-height: 1.33; padding: 0 12px; font-size: 15px; letter-spacing: -1px;}
+  .main_header .inner .item:hover {width: 150px !important; transform: none;}
+  .main_header .inner .item:hover dl dd.thumb img {max-width: 150px; max-height: 140px;}
+  .main_header .inner .item:hover dl dd.cate {top: 24px;}
+  .main_header .inner .item:hover dl dt {padding: 0 12px; font-weight: normal; font-size: 15px; line-height: 1.33em;}
+  .main_header .inner .item:hover dl dd.thumb::after {background: none;}
+  .main_header .inner .item:hover dl dd.thumb~dd.cate {min-width: 50px; max-height: 25px; top: 24px;}
+  .main_header .inner .item:hover dl dd.thumb~dt {top: 59px;}
+  
+  #page_control {text-align: center; margin: 20px 0;}
+  #page_control>a {width: 20px; height: 20px;}
+
+  section {padding: 20px 0; max-width: 100%;}
+  section h2 {font-size: 20px; text-align: left; padding: 0 0 20px 15px; margin-bottom: 0; font-weight: bold;} 
+  section #list_news h2 {margin: 0;}
+  section #list_news {padding-top: 0; padding-bottom: 0; width: 100%; margin: 0 auto;}
+
+  .tab_wrapper ul {overflow: hidden; margin: 0; border-bottom: 1px solid #eaeaea;}
+  .tab_wrapper ul li {float: left; color: #222; width: 16.6%; font-size: 15px;}
+  .tab_wrapper ul li+li {margin-left: 0;}
+  .tab_wrapper ul li::after {top: 26px; height: 2px}
+  .tab_wrapper .tab-contents .news_item_wrap .news_item {width: 100%; margin-right: 0; padding: 0 15px; display: block; background: none; font-size: 16px; border: none;}
+  .tab_wrapper .tab-contents .news_item_wrap .news_item dl {display: table; width: 100%; height: 100%; padding: 10px 0; border-bottom: 1px solid #eaeaea;}
+  .tab_wrapper .tab-contents .news_item_wrap .news_item dl dt {display: table-cell; vertical-align: middle; padding: 0; font-weight: normal; font-size: 16px;} 
+  .tab_wrapper .tab-contents .news_item_wrap .news_item dl dt>a {color: #000;}
+  .tab_wrapper .tab-contents .news_item_wrap .news_item dl dd.thumb+dt {padding-left: 15px; font-size: 16px;}
+  .tab_wrapper .tab-contents .news_item_wrap .news_item dl dd.thumb+dt>a {font-size: 16px; text-decoration: none;} /* 썸네일이 있을경우 dt 폰트 사이즈 */
+  .tab_wrapper .tab-contents .news_item_wrap .news_item dl dd.thumb {display: table-cell; width: 93px; max-width: 93px; height: 62px; margin-right: 15px; vertical-align: middle;}
+  .tab_wrapper .tab-contents .news_item_wrap .news_item dl dd.thumb a img{max-width: 93px; height: 100%;}
+  .tab_wrapper .tab-contents .news_item_wrap .news_item dl dd.text,dd.text>a{display: none;}
+  .tab_wrapper .tab-contents .news_item_wrap .news_item:hover {border: none;}
+
+  .cn_cont_left {width: 100%; padding: 0 15px;}
+  .cn_cont_left dl {max-height: 82px; overflow: hidden; border-bottom: 1px solid #d7d7d7;}
+  .cn_cont_left dl dd.thumb {width: 93px;}
+  .cn_cont_left dl dd.thumb a img {max-height: 62px;}
+  .cn_cont_left dl dt {font-size: 16px; font-weight: normal;}
+  .cn_cont_left dl dd.news_text{display: none;}
+  .cn_cont_right {display: none;}
+
+  .news_more {text-align: center; padding-top: 20px;}
+  .section_ad{display: block; position: relative; width: 100%; height: 80px; background-color: #eaeaea;}
+  .section_ad>a {display: inline-block;}
+  .section_ad>a>img {display: block; max-width: 100%; height: 80px; position: absolute; top: 0;  left: 0; right: 0;  bottom: 0; margin: auto;}
+
+  #page_control>a.slide-prev {background-position: 4px 0;}
+  #page_control>a.slide-next {background-position: -77px 0;}
+  #page_control>a.slide-stop {background-position: -22px 0;}
+  #page_control>a.slide-play {background-position: -51px -2px;}
+
+  footer .copyright {font-size: 11px; padding: 27px 0;}
+}
+
+@media screen and (max-width: 959px){
+  /* article tune mobile */
+  .newsq_title {height: auto;}
+  .newsq_title .news_title_text {width: 100%; }
+  .newsq_title .newsq_title_bg {background-size: cover;}
+  .par {width: 100%; box-sizing: border-box;}
+  .news_imgbox {padding-left: 15px !important; padding-right: 15px !important; box-sizing: border-box;} 
+  .newsq_title .news_title_q em {font-size: 17px;}
+  #csContent {width: auto;}
+
+  /* article 최신뉴스 모바일 */
+  .cn_art_latest_wrap {width: 100%; margin-left: 0; padding: 0 15px; border-top: solid 9px #eaeaea;}
+  .cn_art_latest_wrap h3 {position: static; top: auto; left: auto; padding: 14px 0 10px 5px; font-size: 20px;}
+  .cn_art_latest_wrap .cn_art_latest { margin: 0; }
+  .cn_art_latest_wrap .cn_art_latest dl {width: 50%; height: 94px; margin: 0 0 20px; padding-right: 10px; box-sizing: border-box;}
+  .cn_art_latest_wrap .cn_art_latest dl:nth-child(2n) {padding-right: 0;}
+  .cn_art_latest_wrap .cn_art_latest dl dd.thumb {position: relative; width: 100%; height: 100%;}
+  .cn_art_latest_wrap .cn_art_latest dl dd.thumb+dt {top: 44px;}
+  .cn_art_latest_wrap .cn_art_latest dl dd.thumb+dt a{color: #fff;}
+}
