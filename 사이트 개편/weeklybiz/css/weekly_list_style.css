@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+@import url("//news.chosun.com/dhtm/css/css_reset_2018.css");
+@import url("//fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+KR&display=swap");
+
+ 
+/* float 해제 - 가상클래스 */
+.clear_fix:after {content:""; clear: both; display: block;}
+
+/* global */
+a, a:visited {color: inherit; font-size: inherit; text-decoration: none; }
+#wrapper {line-height: 1.3; letter-spacing: -0.8px; width: 100%;}
+.inner {max-width: 1194px;}
+header .header_bottom ul.menu li.m_art {display: block;}
+
+
+/* PC list style */
+.list>.inner {margin-bottom: 70px; overflow: hidden;}
+.list_left, .list_right {float: left; padding-top: 30px;}
+.list_left {width: 73.2%; margin-right: 1.675%;}
+.list_right {width: 25.125%;}
+.list_left .w_list_tit_area {padding-bottom: 8px; border-bottom: 1.5px solid #222; overflow: hidden;}
+.list_left .w_list_tit_area h2 {float: left; font-size: 28px; font-weight: 500; font-family: 'Noto Serif KR', serif;}
+.list_left .w_list_tit_area.webly h2 {font-weight: bold; font-family: 'Noto Serif', serif;}
+.list_left .w_list_tit_area h2 a {vertical-align: middle;}
+.list_left .w_list_tit_area .sub_title {float: right; margin-top: 20px; font-size: 17px; font-family: 'Noto Serif', serif; color: #777;}
+.w_item_wrap {overflow: hidden;}
+.w_item_wrap.w_item_empty {padding: 30px; text-align: center; font-size: 16px;}
+.w_item_wrap dl {display: table; width: 100%; padding: 20px 0; font-size: 0; border-bottom: 1px solid #eaeaea; overflow: hidden;}
+.w_item_wrap dl dd.thumb {display: table-cell; vertical-align: middle; width: 28.1%; height: 138px; text-align: center; overflow: hidden;}
+.w_item_wrap dl dd.thumb a {position: relative; display: block; width: 100%; height: 100%; max-height: 138px; font-size: 0; line-height: 0; background:#f8f8f8;}
+.w_item_wrap dl dd.thumb img {position: absolute; top: 0; right: 0; bottom: 0; left: 0; max-width: 100%; width: auto; height: 100%; margin: auto; overflow: hidden;}
+.w_item_wrap dl dd.thumb+dt {padding-left: 20px;}
+.w_item_wrap dl dd.thumb~dd.sum,
+.w_item_wrap dl dd.thumb~dd.desc,
+.w_item_wrap dl dd.thumb~dd.author {padding-left: 20px;}
+.w_item_wrap dl dt {margin-bottom: 10px; font-size: 18px; letter-spacing: -1.4px;}
+.w_item_wrap dl dd.sum {margin-bottom: 6px;font-size: 17px; letter-spacing: -1.28px;}
+.w_item_wrap dl dd.desc {max-height: 4.5em; margin-bottom: 12px; font-size: 14px; line-height: 1.5; color: #999; overflow: hidden;} /* 기사 본문 최대 3줄 노출 */
+.w_item_wrap dl dd.sum+dd.desc {max-height: 3em;} /* 기사 서브 타이틀 있는 경우 본문 2줄 노출 */
+.w_item_wrap dl dd.author {display: inline-block; font-size: 13px; color: #999; letter-spacing: normal;}
+.w_item_wrap dl dd.author span {margin-right: -4px; padding-right: 10px;}
+.w_item_wrap dl dd.author span+span {padding-left: 10px; background: url("//image.chosun.com/weeklybiz/imges2019/corp_line.gif") no-repeat left 4px;}
+
+/* date picker calendar */
+.list_date_box {position: relative; display: inline-block; margin-left: 5px; vertical-align: bottom;}
+.pick_month {margin-bottom: 15px; text-align: center;}
+.pick_month a {position: relative; display: inline-block; width: 20px; height: 20px; margin: 0 5px; font-size: 0; vertical-align: top;}
+.pick_month a:after {content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: block; width: 14px; height: 14px; margin: auto; background: url("//image.chosun.com/main/201803/icon_article.png") no-repeat;}
+.pick_month a.pick_month_prev::after {background-position: -250px -50px;}
+.pick_month a.pic_month_next::after {background-position: -275px -50px;}
+.pick_month span.pick_month_current {font-size: 15px; font-weight: bold; color: #000;}
+
+.pick_btn {padding: 10px 0; border-top: solid 1px #eaeaea; font-size: 0; text-align: center;}
+.pick_btn a {display: inline-block; height: 20px; padding: 0 12px; font-size: 12px; line-height: 18px; color: #777; text-decoration: none; border: solid 1px #d7d7d7;}
+.pick_btn a:hover {background: #f3f3f3;}
+.pick_btn a+a {margin-left: 10px;}
+
+.date_picker_calendar {position: absolute; top: 32px; left: 0; width: 210px; padding-top: 15px; background: #fff; border: solid 1px #d7d7d7; transform: translateY(-10px); -webkit-transition: ease all 0.3s; -moz-transition: ease all 0.3s; -o-transition: ease all 0.3s; -ms-transition: ease all 0.3s; transition: ease all 0.3s; opacity: 0; box-sizing: border-box; visibility: hidden;}
+.date_picker_calendar.vis {visibility: visible; opacity: 1; transform: translateY(0px);}
+.date_picker_calendar table {margin: 0 auto; font-weight: bold;}
+.date_picker_calendar table tr th {padding-bottom: 5px; font-size: 11px; color: #000; text-align: center;}
+.date_picker_calendar table tr td {padding: 3px 2px; font-size: 13px; color: #000; text-align: center; cursor: default;}
+.date_picker_calendar table tr td a {display: block; padding: 3px 4px; color: #ccc; font-weight: normal; cursor: inherit; pointer-events: inherit; text-decoration: none;}
+.date_picker_calendar table tr td a.rec_day {color: #000; font-weight: bold; cursor: pointer; pointer-events: auto;}
+.date_picker_calendar table tr td a.rec_day.current {color: #fff; background: #c51a18; border-radius: 100%;} 
+/* .date_picker_calendar table tr td a:hover { color: #000; text-decoration: none; background: #f3f3f3; border-radius: 100%;} */
+
+/*selectbox tune*/
+.w_selectbox {position: relative; float: right; width: 138px; font-size: 16px; line-height: 40px; border: 1px solid #d7d7d7; cursor: pointer; box-sizing: border-box;}
+.w_selectbox .default_text {position: relative; padding-left: 16px; letter-spacing: normal;}
+.w_selectbox .default_text::after {content: ""; position: absolute; top: 16px; right: 12px; display: inline-block; width: 14px; height: 8px; font-size: 0; background: url("//image.chosun.com/weeklybiz/imges2019/weekly_icon.png") no-repeat; background-position: -300px -350px;}
+.w_selectbox .default_text.add::after {transform: rotate(180deg); -webkit-transition: ease transform 0.4s; -moz-transition: ease transform 0.4s; -o-transition: ease transform 0.4s; -ms-transition: ease transform 0.4s; transition: ease transform 0.4s;}
+.w_selectbox ul.select {position: absolute; width: 138px; margin: -1px; background-color: #fff;border: 1px solid #d7d7d7; visibility: hidden; opacity: 0; transform: translateY(-10px); -webkit-transition: ease all 0.3s; -moz-transition: ease all 0.3s; -o-transition: ease all 0.3s; -ms-transition: ease all 0.3s; transition: ease all 0.3s; box-sizing: border-box;}
+.w_selectbox ul.select.vis {visibility: visible; opacity: 1; transform: translateY(0px);}
+.w_selectbox ul.select li:first-child, 
+.w_selectbox ul.select li:last-child {margin-top: 8px;}
+.w_selectbox ul.select li {position: relative; padding-left: 16px; line-height: 1.94;}
+.w_selectbox ul.select li.current {font-weight: bold;}
+.w_selectbox ul.select li.calendar_pick {line-height: 40px; background: #f3f3f3; overflow: hidden;}
+.w_selectbox a.btn_calendar {float: right; width: 16px; height: 14px; margin: 13px; font-size: 0; background: url("//image.chosun.com/weeklybiz/imges2019/weekly_icon.png") no-repeat; background-position: -350px -150px;}
+.date_picker_calendar {top: 266px; right: 0; left: auto; padding: 15px 0; line-height: 1;}
+.select_mask {position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; background: #fff; opacity: 0; cursor: pointer; display: none;}
+.select_mask.vis {display: block;}
+
+
+/* weekly 2019 list & search right area 공통css - pc */
+.right_ad {width: 100%; text-align: center;}
+.right_ad .right_ad_inner {width: 300px; height: 250px; margin: 0 auto;}
+
+/*rangking tab news area style*/
+.ranking_news {padding: 20px 0;}
+.ranking_tab_wrap {position: relative; border: 1px solid #d7d7d7; border-top: none;}
+.ranking_tab_wrap ul.tab_nav {line-height: 40px; text-align: center; border-top: 2px solid #222; border-bottom: 1px solid #d7d7d7; overflow: hidden;}
+.ranking_tab_wrap ul.tab_nav li {float: left; width: 50%; color: #777; cursor: pointer;}
+.tab_cont_wrap ol {padding: 0 15px;}
+.tab_cont_wrap ol li.tab_item {padding-left: 22px;} 
+.tab_cont_wrap ol li.tab_item dl {display: table; width: 100%; padding: 10px 0;}
+.tab_cont_wrap ol li.tab_item dl dt {position: relative; display: table-cell; vertical-align: middle; max-height: 3.99em; padding-right: 5px; line-height: 1.33; font-weight: normal;} /*기사제목 최대 3줄 노출*/
+.tab_cont_wrap ol li.tab_item dl dd.thumb {position: relative; display: table-cell; vertical-align: middle; width: 50px; height: 50px; text-align: right; overflow: hidden;}
+.tab_cont_wrap ol li.tab_item dl dd.thumb a {display: block; width: 100%; height: 100%; font-size: 0; line-height: 0; background: #f8f8f8;}
+.tab_cont_wrap ol li.tab_item dl dd.thumb img {position: absolute; left: 0; right: 0; top: 0; bottom: 0; max-width: 100%; max-height: 50px; margin: auto; overflow: hidden;}
+.tab_cont_wrap ol li+li {border-top: 1px solid #eaeaea;}
+
+/*rangNewsTab 동작 관련 css*/
+.ranking_tab_wrap ul.tab_nav li.current {/* color: #24a4e6; */ color: #000; font-weight: bold;}
+.ranking_tab_wrap ul.tab_nav li.current>span {display: inline-block; padding: 0 8px; border-bottom: 1px solid #222;}
+.ranking_tab_wrap .tab-contents {display: none;}
+.ranking_tab_wrap .tab-contents.current {display: block;}
+
+/* rangking news num list  */
+.tab_cont_wrap ol li dl dt a {position: relative;}
+.tab_cont_wrap ol li dl dt a:hover {text-decoration: none;}
+.tab_cont_wrap ol li dl dt a::before {position: absolute; top: 0; left: -20px; font-size: 17px; font-weight: bold; color: #24a4e6; font-style: italic;}
+.tab_cont_wrap ol li.num1 dl dt a::before {content: '1';}
+.tab_cont_wrap ol li.num2 dl dt a::before {content: '2';}
+.tab_cont_wrap ol li.num3 dl dt a::before {content: '3';}
+.tab_cont_wrap ol li.num4 dl dt a::before {content: '4';}
+.tab_cont_wrap ol li.num5 dl dt a::before {content: '5';}
+.tab_cont_wrap ol li.num6 dl dt a::before {content: '6';}
+.tab_cont_wrap ol li.num7 dl dt a::before {content: '7';}
+.tab_cont_wrap ol li.num8 dl dt a::before {content: '8';}
+.tab_cont_wrap ol li.num9 dl dt a::before {content: '9';}
+.tab_cont_wrap ol li.num10 dl dt a::before {content: '10';}
+.paper h3 {padding-bottom: 12px;}
+
+/*news list pagenate area*/
+.paginate {padding-top: 39px;}
+ul.paginate_num { font-size: 14px; line-height: 24px; text-align: center;}
+ul.paginate_num li {display: inline-block; width: 28px; height: 24px;}
+ul.paginate_num li:first-child {margin-left: 0;}
+ul.paginate_num li a {display: inline-block; width: 28px; height: 24px;  line-height: 22px; text-align: center; color: #000; text-decoration: none; border: solid 1px #fff; box-sizing: border-box;}
+ul.paginate_num li a:hover {border: solid 1px #c51a18;}
+ul.paginate_num li a.current {color: #c51a18;}
+ul.paginate_num li a.prev,
+ul.paginate_num li a.next {width: 17px; height: 17px; margin: 4px 3px 0; font-size: 0; vertical-align: top; background: url("//image.chosun.com/main/201803/icon_article.png") no-repeat -250px -50px; border: solid 1px #d7d7d7;}
+ul.paginate_num li a.next {background-position: -275px -50px;}
+
+li.calendar_pick {position: relative;}
+
+@media all and (max-width: 959px){
+    /* tablet~ list style*/
+    body, input, button, textarea {font-family: 'Apple SD Gothic Neo','Malgun Gothic', 맑은고딕, arial, sans-serif;}
+    /* dl dt {max-height: 3.9em; overflow: hidden; padding-bottom: 0; font-size: 16px; letter-spacing: normal; font-weight: normal;} */
+
+    .list>.inner {margin-bottom: 0;}
+    .list_left, 
+    .list_right {width: 100%; margin: 0;}
+    .list_left {padding: 0 15px; box-sizing: border-box;}
+    .list_right {padding-top: 0;}
+    .list_left .w_list_tit_area {padding: 10px 0 6px; border-bottom: 1px solid #eaeaea;}
+    .list_left .w_list_tit_area h2 {font-size: 16px; line-height: 35px; font-weight: bold;}
+    .list_left .w_list_tit_area .sub_title {margin-top: 12px; font-size: 14px;}
+    .list_left .w_selectbox ul.select li:last-child {margin-bottom: 10px;}
+
+    /*weekly 2019 list & search right area 공통css - m*/
+    .right_ad {border-top: 9px solid #f3f3f3; border-bottom: 9px solid #f3f3f3;}
+    .right_ad .right_ad_inner {width: 728px; height: 90px;}
+    .right_ad img{overflow: hidden;}
+    .w_item_wrap dl {width: 100%; padding: 15px 0; box-sizing: border-box;}
+    .w_item_wrap dl dd.thumb {width: 92px; height: 62px; margin-right: 0;}
+    .w_item_wrap dl dd.thumb a {max-height: 62px;}
+    .w_item_wrap dl dd.sum {display: none;}
+    .w_item_wrap dl dd.desc {display: none;}
+    .w_item_wrap dl dt {max-height: 3.9em; margin-bottom: 6px; padding-bottom: 0; font-size: 16px; line-height: 1.3; letter-spacing: normal; font-weight: normal; overflow: hidden;}
+    .w_item_wrap dl dd.thumb+dt {padding-left: 15px;}
+    .w_item_wrap dl dd.thumb~dd.author {padding-left: 15px;} 
+
+    .paginate {padding: 23px 0;}
+    ul.paginate_num li a {margin: -4px;}
+    .w_selectbox {width: 120px; height: 35px; line-height: 35px;}
+    .w_selectbox .default_text {padding-left: 12px; font-size: 15px;}
+    .w_selectbox ul.select {width: 120px; padding: 10px 0;}
+    .w_selectbox ul.select li.calendar_pick {display: none;}
+    .w_selectbox ul.select li:first-child,
+    .w_selectbox ul.select li:last-child {margin: 0;}
+    .w_selectbox .default_text::after {top: 12px; width: 12px; background-size: 250px; background-position: -125px -250px;}
+    .ranking_news {padding: 0 15px;}
+    .ranking_tab_wrap {border: none;}
+    .ranking_tab_wrap ul.tab_nav {margin-top: 10px; border: none;}
+    .ranking_tab_wrap ul.tab_nav li.current {border-bottom: 2px solid #24a4e6;}
+    .ranking_tab_wrap ul.tab_nav li.current>span {border: none; color: #24a4e6;}
+    .ranking_tab_wrap .tab_cont_wrap {border: none; border-top: 1px solid #eaeaea;}
+    .tab_cont_wrap ol {padding: 0;}
+    .tab_cont_wrap ol li.tab_item:nth-child(n+6){display: none;}
+    .tab_cont_wrap ol li.tab_item dl {width: 100%;}
+    .tab_cont_wrap ol li.tab_item dl dt {padding-bottom: 0; font-size: 16px; letter-spacing: normal; font-weight: normal; overflow: visible;}
+    .tab_cont_wrap ol li dl dt a::before {position: absolute; top: 50%; transform: translateY(-50%); font-size: 20px; font-family: 'Noto Serif KR', serif; font-style: normal;}
+    .tab_cont_wrap ol li.tab_item dl dd.thumb {width: 92px; height: 62px;}
+    .tab_cont_wrap ol li.tab_item dl dd.thumb img {max-height: 62px;}
+    .ranking_tab_wrap .today_date a.prev,
+    .ranking_tab_wrap .today_date a.next {background-size: 250px;} /* mobile icon 2x image */
+    .ranking_tab_wrap .today_date a.prev {background-position: -212.5px -75px;}
+    .ranking_tab_wrap .today_date a.next {background-position: -212.5px -100px;}
+
+    .paper {display: none;}
+}
+
+@media all and (max-width: 739px){
+    .right_ad .right_ad_inner {width: 300px; height: 250px;}
+}
+

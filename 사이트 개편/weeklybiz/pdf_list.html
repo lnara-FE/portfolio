@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>PDF 보기 목록 - WEEKLY BIZ</title>
+        <meta name="description" content="조선일보 프리미엄 격주간지 - WEEKLY BIZ">
+        <meta name="news_keysords" content="">
+        <meta name="keywords" content="조선일보, 조선닷컴, chosun, 위클리비즈, WEEKLY BIZ, Spotlight, Analysis, Opinion, Culture, Trend">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta http-equiv="Cache-Control" content="no-cache">
+    
+        <!--[if lt IE 9]><script src="http://news.chosun.com/dhtm/html5/html5shiv.min.js"></script><![endif]-->
+        <link rel="stylesheet" type="text/css" href="//weeklybiz.chosun.com/dhtm2019/css/swiper.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/weekly_style.css">
+        <link rel="stylesheet" type="text/css" href="css/weekly_list_style.css">
+        <link rel="stylesheet" type="text/css" href="css/weekly_pdf_list_style.css">
+    
+        <script src="//weeklybiz.chosun.com/dhtm2019/js/jquery-1.9.1.min.js"></script> 
+        <script src="//weeklybiz.chosun.com/dhtm2019/js/swiper.min.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <script>
+            //chosun.com simple gnb var
+            var csmgsgnbWidth = "1196", //사이트 내 콘텐츠 너비값 (기본값 : 1196px)
+                csmgsgnbLogin = "N", //로그인 버튼 사용 여부 (기본값 : N)
+                csmgsgnbSearch = "N"; //검색 버튼 사용 여부 (기본값 : N)
+            </script>
+
+            <script src="js/weeklybiz_gnb_pkg.js"></script>
+        
+            <main class="list">
+                <div class="inner clear_fix">
+                    <div class="pdf_list_left" id="pdf_list_left_id">
+                        <div class="pdf_list_tit clear_fix">
+                            <h2>날짜별 지면보기</h2>
+                            <div class="selectbox">
+                                <select id="selectYear" name="selectYear" onchange="">
+                                    <option value="20190111" selected="">2019년</option>
+                                    <option value="20180113">2018년</option>
+                                    <option value="20170107">2017년</option>
+                                    <option value="20160109">2016년</option>
+                                    <option value="20150103">2015년</option>
+                                    <option value="20140104">2014년</option>
+                                    <option value="20130105">2013년</option>
+                                    <option value="20120107">2012년</option>
+                                    <option value="20110108">2011년</option>
+                                    <option value="20100109">2010년</option>
+                                    <option value="20090103">2009년</option>
+                                    <option value="20080105">2008년</option>
+                                    <option value="20070106">2007년</option>
+                                    <option value="20061014">2006년</option>
+                                </select>
+                                <select id="selectDate" name="selectDate" onchange="">
+                                    <option value="20190101">발행일 선택</option>	
+                                    <option value="20190719" selected="">7월 19일</option>
+                                    <option value="20190705">7월 5일</option>
+                                    <option value="20190621">6월 21일</option>
+                                    <option value="20190607">6월 7일</option>
+                                    <option value="20190524">5월 24일</option>
+                                    <option value="20190510">5월 10일</option>
+                                    <option value="20190426">4월 26일</option>
+                                    <option value="20190412">4월 12일</option>
+                                    <option value="20190329">3월 29일</option>
+                                    <option value="20190315">3월 15일</option>
+                                    <option value="20190301">3월 1일</option>
+                                    <option value="20190215">2월 15일</option>
+                                    <option value="20190125">1월 25일</option>
+                                    <option value="20190111">1월 11일</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="pdf_item_container swiper-container"> 
+                            <div class="pdf_item_wrap swiper-wrapper">
+                                <div class="pdf_item swiper-slide">
+                                    <div class="thumb">
+                                        <span>1면</span>
+                                        <img src="images/pdf_1.jpg" alt="">
+                                        <div class="view_btn_area"><a href="#" class="pdf_view_btn">PDF 보기</a></div>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <dl>
+                                                <dt><a href="#">2주마다 새 패션, 세계를 정복하다<span>기사보기</span></a></dt>
+                                                <dd class="cate"><a href="#">Cover Story</a></dd>
+                                                <dd class="author">이위재 차장, 유진우 기자, 라코루냐(스페인)</dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pdf_item swiper-slide">
+                                    <div class="thumb">
+                                        <span>2면</span>
+                                        <img src="images/pdf_2.jpg" alt="">
+                                        <div class="view_btn_area"><a href="#" class="pdf_view_btn">PDF 보기</a></div>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <dl>
+                                                <dt><a href="#">“금리 조정 같은 통화정책은 한계 분명… 정부가 돈 쓰는 재정정책  병행해야”<span>기사보기</span></a></dt>
+                                                <dd class="cate"><a href="#">Cover Story</a></dd>
+                                                <dd class="author">이위재 차장, 유진우 기자, 라코루냐(스페인)</dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt><a href="#">“금리 조정 같은 통화정책은 한계 분명… 정부가 돈 쓰는 재정정책  병행해야”<span>기사보기</span></a></dt>
+                                                <dd class="cate"><a href="#">Cover Story</a></dd>
+                                                <dd class="author">이위재 차장, 유진우 기자, 라코루냐(스페인)</dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pdf_item swiper-slide">
+                                    <div class="thumb">
+                                        <span>3면</span>
+                                        <img src="images/pdf_3.jpg" alt="">
+                                        <div class="view_btn_area"><a href="#" class="pdf_view_btn">PDF 보기</a></div>
+                                    </div>
+
+                                    <ul>
+                                        <li>
+                                            <dl>
+                                                <dt><a href="#">美 대통령 임기 후반엔 주가 상승, 한국은?<span>기사보기</span></a></dt>
+                                                <dd class="cate"><a href="#">Cover Story</a></dd>
+                                                <dd class="author">이위재 차장, 유진우 기자, 라코루냐(스페인)</dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt>2주마다 새 패션, 세계를 정복하다<a href="#">기사보기</a></dt>
+                                                <dd class="cate"><a href="#">Cover Story</a></dd>
+                                                <dd class="author">이위재 차장, 유진우 기자, 라코루냐(스페인)</dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pdf_item swiper-slide">
+                                    <div class="thumb">
+                                        <span>4면</span>
+                                        <img src="images/pdf_4.jpg" alt="">
+                                        <div class="view_btn_area"><a href="#" class="pdf_view_btn">PDF 보기</a></div>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <dl>
+                                                <dt><a href="#">수면 위로 떠오른 UBS와 도이체방크의 합병<span>기사보기</span></a></dt>
+                                                <dd class="cate"><a href="#">Cover Story</a></dd>
+                                                <dd class="author">이위재 차장, 유진우 기자, 라코루냐(스페인)</dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt><a href="#">2주마다 새 패션, 세계를 정복하다<span>기사보기</span></a></dt>
+                                                <dd class="cate"><a href="#">Cover Story</a></dd>
+                                                <dd class="author">이위재 차장, 유진우 기자, 라코루냐(스페인)</dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt><a href="#">2주마다 새 패션, 세계를 정복하다<span>기사보기</span></a></dt>
+                                                <dd class="cate"><a href="#">Cover Story</a></dd>
+                                                <dd class="author">이위재 차장, 유진우 기자, 라코루냐(스페인)</dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pdf_item swiper-slide">
+                                    <div class="thumb">
+                                        <span>5면</span>
+                                        <img src="images/pdf_5.jpg" alt="">
+                                        <div class="view_btn_area"><a href="#" class="pdf_view_btn">PDF 보기</a></div>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <dl>
+                                                <dt><a href="#">“금리 조정 같은 통화정책은 한계 분명… 정부가 돈 쓰는 재정정책  병행해야”<span>기사보기</span></a></dt>
+                                                <dd class="cate"><a href="#">Cover Story</a></dd>
+                                                <dd class="author">이위재 차장, 유진우 기자, 라코루냐(스페인)</dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt><a href="#">2주마다 새 패션, 세계를 정복하다<span>기사보기</span></a></dt>
+                                                <dd class="cate"><a href="#">Cover Story</a></dd>
+                                                <dd class="author">이위재 차장, 유진우 기자, 라코루냐(스페인)</dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt><a href="#">2주마다 새 패션, 세계를 정복하다<span>기사보기</span></a></dt>
+                                                <dd class="cate"><a href="#">Cover Story</a></dd>
+                                                <dd class="author">이위재 차장, 유진우 기자, 라코루냐(스페인)</dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt><a href="#">2주마다 새 패션, 세계를 정복하다<span>기사보기</span></a></dt>
+                                                <dd class="cate"><a href="#">Cover Story</a></dd>
+                                                <dd class="author">이위재 차장, 유진우 기자, 라코루냐(스페인)</dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+
+                    <div class="pdf_list_right" id="pdf_list_right_id">
+                        <!--weekly 2019 list & search right area 공통 js-->
+                        <script src="js/weekly_r_area.js"></script>
+                    </div>
+
+                </div>
+
+            </main>
+
+            <!--footer area -->
+            <script src="js/weeklybiz_footer_pkg.js"></script>
+            <!--footer area end-->
+
+        </div>
+
+<script type="text/javascript">
+    weeklyPdfSli();
+
+    function weeklyPdfSli(){
+        var weeklyPdfSli = true;
+        function initSwiper() {
+            var windowWidth = $(window).outerWidth();
+            if ( (windowWidth <= 959) && ( weeklyPdfSli == true)) {
+                //959~
+                console.log('mobile');
+                weeklyPdfSli = new Swiper('.pdf_item_container', {
+                loop: false,
+                speed: 400,
+                scrollbarHide: true,
+                slidesPerView: 1,
+                spaceBetween: 10,
+                slideToClickedSlide: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+            $('.pdf_item_wrap').css("display","flex");
+
+            } else if ((windowWidth >= 960) && ( weeklyPdfSli != true)) {
+                //960px~
+                console.log('pc');
+                weeklyPdfSli.destroy();
+                weeklyPdfSli = true;
+                $('.swiper-wrapper').removeAttr('style');
+                $('.swiper-slide').removeAttr('style');
+            }
+        }
+        initSwiper();
+
+        $(window).resize(function() {
+            initSwiper();
+        });
+    }  
+</script>
+    </body>
+</html>

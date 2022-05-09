@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>WeeklyBiz Search</title>
+        <meta name="description" content="조선일보 프리미엄 격주간지 - WEEKLY BIZ">
+        <meta name="news_keysords" content="">
+        <meta name="keywords" content="조선일보, 조선닷컴, chosun, 위클리비즈, WEEKLY BIZ, Spotlight, Analysis, Opinion, Culture, Trend">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta http-equiv="Cache-Control" content="no-cache">
+
+        <!--[if lt IE 9]><script src="http://news.chosun.com/dhtm/html5/html5shiv.min.js"></script><![endif]-->
+        <link rel="stylesheet" type="text/css" href="//weeklybiz.chosun.com/dhtm2019/css/swiper.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/weekly_style.css">
+        <link rel="stylesheet" type="text/css" href="css/weekly_list_style.css">
+        <link rel="stylesheet" type="text/css" href="css/weekly_search_style.css">
+
+        <script src="//weeklybiz.chosun.com/dhtm2019/js/jquery-1.9.1.min.js"></script> 
+        <script src="//weeklybiz.chosun.com/dhtm2019/js/swiper.min.js"></script>
+    </head>
+    <body>
+        <a id="top"></a> <!--맨 위로가기 버튼-->
+
+        <div id="wrapper">
+
+            <script>
+            //chosun.com simple gnb var
+            var csmgsgnbWidth = "1196", //사이트 내 콘텐츠 너비값 (기본값 : 1196px)
+                csmgsgnbLogin = "N", //로그인 버튼 사용 여부 (기본값 : N)
+                csmgsgnbSearch = "N"; //검색 버튼 사용 여부 (기본값 : N)
+            </script>
+
+            <script src="//news.chosun.com/ui/js/csmgs_simple_gnb.js"></script>
+
+            <script src="js/weeklybiz_gnb_pkg.js"></script>
+            
+            <div class="sch_header">
+                <a class="mhome_btn" href="#">홈</a>
+                <h1>검색</h1>
+                <a class="mclose_btn" href="#">검색 닫기</a>
+            </div>
+
+             <div class="sch_area" id="sch_area_id">
+                <div class="sch_inputbox">
+                    <form method="get" name="frm" id="id_searchForm" onsubmit="_goSearch('query');return false">
+                        <fieldset>
+                            <legend>통합검색</legend>
+                            <span class="InputOutline"><input type="text" value="" class="searchTerm" id="query" name="query" title="검색어 입력" onfocus="s_clear()" placeholder="검색어를 입력하세요." autocomplete="off"><input type="submit" alt="Search" title="Search" class="searchBtn" value="Search"><a href="javascript:void(0)" class="closeBtn" id="search_close_id">닫기</a></span>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <div class="sch_cont" id="sch_cont_id">
+                <div class="inner">
+                    <div class="sch_l_area">
+                        <div class="sch_head">
+                            <div class="result_count">
+                                <h2>검색결과</h2>
+                                <div class="count_box">1,230,086건 중 1~10건</div>
+                            </div>
+                            <ul>
+                                <li class="current"><a href="#">관련도순</a></li>
+                                <li><a href="#">최신순</a></li>
+                            </ul>
+                        </div>
+                        <!--sch_head end-->
+                        <div class="sch_result">
+                            <dl class="result_item">
+                                <dd class="thumb"><a href="#"><img src="images/list_thumb4.jpg" alt="기사이미지"></a></dd>
+                                <dt><a href="#">블루보틀은 왜 강남 버리고 성수동을 택했을까</a></dt>
+                                <dd class="cont">블루보틀에 대해 알게 된 게 언제인지 기억나지 않는다. 블루보틀 로고가 있는 머그 잔에 커피를 얻어 마신 적이 있음은 기억한다. 그 커피가 블루보틀에서 사 온 원두인지 다른 원두로 내린 것인지도…그 커피가 블루보틀에서 사 온 원두인지 다른 원두로 내린 것인지도…</dd>
+                                <dd class="art_info">
+                                    <a class="art_btn" href="#">A04면</a>
+                                    <span class="category">경제</span>
+                                    <span class="author">웨이샹진 미국 컬럼비아대 교수</span>
+                                    <span class="date">2019.06.18</span>
+                                </dd>
+                            </dl>
+                            <dl class="result_item">
+                                <dd class="thumb"><a href="#"><img src="images/list_thumb5.jpg" alt="기사이미지"></a></dd>
+                                <dt><a href="#">“성수동 공장 건물의 매력 살려… 성동구를 ‘한국의 브루클린’ 블루보틀로”</a></dt>
+                                <dd class="cont">3일 서울 성동구에 1호점을 연 미국 커피 브랜드 ‘블루보틀’ 매장 앞에 고객들이 줄지어 서 있다. 오전 8시 개점(開店)을 앞두고 오전 6시 30분부터 매장 앞에 손님들이 몰렸다.</dd>
+                                <dd class="art_info">
+                                    <a class="art_btn" href="#">A04면</a>
+                                    <span class="category">경제</span>
+                                    <span class="author">남민우 기자, 이현욱 인턴기자</span>
+                                    <span class="date">2019.06.18</span>
+                                </dd>
+                            </dl>
+                            <dl class="result_item">
+                                <dt><a href="#">드디어 한국 오픈 블루보틀</a></dt>
+                                <dd class="cont">... 시작부터 삐걱거리고 있다. 문재인 대통령이 "국민 동의 없이 일방적 개편은 없다"며 진화에 나섰지만 ... 지라고 하니 반발이 이는 것이다. 635조원 국민 노후자금을 굴리는 국민연금 기금운용본부장은 13개월째 ...</dd>
+                                <dd class="art_info">
+                                    <a class="art_btn" href="#">A04면</a>
+                                    <span class="category">경제</span>
+                                    <span class="author">김기훈 경제부 부장</span>
+                                    <span class="date">2019.06.18</span>
+                                </dd>
+                            </dl>
+                            <dl class="result_item">
+                                <dt><a href="#">블루보틀… ‘파랑’의 출세는 언제부터였을까</a></dt>
+                                <dd class="cont">블루보틀에 대해 알게 된 게 언제인지 기억나지 않는다. 블루보틀 로고가 있는 머그 잔에 커피를 얻어 마신 적이 있음은 기억한다. 그 커피가 블루보틀에서 사 온 원두인지 다른 원두로 내린 것인지도 모르겠다.</dd>
+                                <dd class="art_info">
+                                    <a class="art_btn" href="#">A04면</a>
+                                    <span class="category">경제</span>
+                                    <span class="author">안데스 오스룬드 미국 대서양위원회 선임연구원</span>
+                                    <span class="date">2019.06.18</span>
+                                </dd>
+                            </dl>
+                            <dl class="result_item">
+                                <dd class="thumb"><a href="#"><img src="images/list_thumb2.jpg" alt="기사이미지"></a></dd>
+                                <dt><a href="#">커피계 애플 ‘블루보틀’ 1호점에 줄지어 선 손님들</a></dt>
+                                <dd class="cont">3일 서울 성동구에 1호점을 연 미국 커피 브랜드 ‘블루보틀’ 매장 앞에 고객들이 줄지어 서 있다. 오전 8시 개점(開店)을 앞두고 오전 6시 30분부터 매장 앞에 손님들이 몰렸다.</dd>
+                                <dd class="art_info">
+                                    <a class="art_btn" href="#">A04면</a>
+                                    <span class="category">경제</span>
+                                    <span class="author">홍춘욱 이코노미스트</span>
+                                    <span class="date">2019.06.18</span>
+                                </dd>
+                            </dl>
+
+                            <div class="search_result_pc_ad">
+                                <a href="#"><img src="images/bn_728x90.jpg" alt=""></a>
+                            </div><!-- search_result_adv -->
+
+                            <dl class="result_item">
+                                <dd class="thumb"><a href="#"><img src="images/list_thumb8.jpg" alt="기사이미지"></a></dd>
+                                <dt><a href="#">블루보틀은 왜 강남 버리고 성수동을 택했을까</a></dt>
+                                <dd class="cont">블루보틀에 대해 알게 된 게 언제인지 기억나지 않는다. 블루보틀 로고가 있는 머그 잔에 커피를 얻어 마신 적이 있음은 기억한다. 그 커피가 블루보틀에서 사 온 원두인지 다른 원두로 내린 것인지도…</dd>
+                                <dd class="art_info">
+                                    <a class="art_btn" href="#">A04면</a>
+                                    <span class="category">경제</span>
+                                    <span class="author">송의달 선임기자</span>
+                                    <span class="date">2019.06.18</span>
+                                </dd>
+                            </dl>
+                            <dl class="result_item">
+                                <dd class="thumb"><a href="#"><img src="images/thumb23.jpg" alt="기사이미지"></a></dd>
+                                <dt><a href="#">“성수동 공장 건물의 매력 살려… 성동구를 ‘한국의 브루클린’ 블루보틀로”</a></dt>
+                                <dd class="cont">3일 서울 성동구에 1호점을 연 미국 커피 브랜드 ‘블루보틀’ 매장 앞에 고객들이 줄지어 서 있다. 오전 8시 개점(開店)을 앞두고 오전 6시 30분부터 매장 앞에 손님들이 몰렸다.</dd>
+                                <dd class="art_info">
+                                    <a class="art_btn" href="#">A04면</a>
+                                    <span class="category">경제</span>
+                                    <span class="author">최종석 기자</span>
+                                    <span class="date">2019.06.18</span>
+                                </dd>
+                            </dl>
+                            <dl class="result_item">
+                                <dt><a href="#">드디어 한국 오픈 블루보틀</a></dt>
+                                <dd class="cont">... 시작부터 삐걱거리고 있다. 문재인 대통령이 "국민 동의 없이 일방적 개편은 없다"며 진화에 나섰지만 ... 지라고 하니 반발이 이는 것이다. 635조원 국민 노후자금을 굴리는 국민연금 기금운용본부장은 13개월째 ...</dd>
+                                <dd class="art_info">
+                                    <a class="art_btn" href="#">A04면</a>
+                                    <span class="category">경제</span>
+                                    <span class="author">모하메드 엘 에리언 알리안츠 고문</span>
+                                    <span class="date">2019.06.18</span>
+                                </dd>
+                            </dl>
+                            <dl class="result_item">
+                                <dt><a href="#">블루보틀… ‘파랑’의 출세는 언제부터였을까</a></dt>
+                                <dd class="cont">블루보틀에 대해 알게 된 게 언제인지 기억나지 않는다. 블루보틀 로고가 있는 머그 잔에 커피를 얻어 마신 적이 있음은 기억한다. 그 커피가 블루보틀에서 사 온 원두인지 다른 원두로 내린 것인지도 모르겠다.</dd>
+                                <dd class="art_info">
+                                    <a class="art_btn" href="#">A04면</a>
+                                    <span class="category">경제</span>
+                                    <span class="author">크리스 브라이언 블룸버그 칼럼니스트</span>
+                                    <span class="date">2019.06.18</span>
+                                </dd>
+                            </dl>
+                            <dl class="result_item">
+                                <dd class="thumb"><a href="#"><img src="images/thumb20.jpg" alt="기사이미지"></a></dd>
+                                <dt><a href="#">커피계 애플 ‘블루보틀’ 1호점에 줄지어 선 손님들</a></dt>
+                                <dd class="cont">3일 서울 성동구에 1호점을 연 미국 커피 브랜드 ‘블루보틀’ 매장 앞에 고객들이 줄지어 서 있다. 오전 8시 개점(開店)을 앞두고 오전 6시 30분부터 매장 앞에 손님들이 몰렸다.</dd>
+                                <dd class="art_info">
+                                    <a class="art_btn" href="#">A04면</a>
+                                    <span class="category">경제</span>
+                                    <span class="author">홍성태 한양대학교 경영학과 교수</span>
+                                    <span class="date">2019.06.18</span>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="paginate" id="paginate_pc_id">
+                            <ul class="paginate_num">
+                                <li><a class="prev" href="#">이전</a></li>
+                                <li><a class="current" href="#">1</a></li> 
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a class="last"href="#">10</a></li> 
+                                <li><a class="next" href="#">다음</a></li>
+                            </ul>
+                        </div>
+                        <div class="chosun_search"></div>
+                    </div>
+
+                    <div class="sch_r_area">
+                        <!--weekly 2019 list & search right area 공통 js-->
+                        <script src="js/weekly_r_area.js"></script>
+                    </div>
+                </div>
+            </div>
+
+            <!--footer area -->
+           <script src="js/weeklybiz_footer_pkg.js"></script>
+            <!--footer area end-->
+
+        </div>
+    </body>
+</html>

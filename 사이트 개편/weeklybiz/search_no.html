@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>WeeklyBiz Search - 검색 결과 없음</title>
+        <meta name="description" content="조선일보 프리미엄 격주간지 - WEEKLY BIZ">
+        <meta name="news_keysords" content="">
+        <meta name="keywords" content="조선일보, 조선닷컴, chosun, 위클리비즈, WEEKLY BIZ, Spotlight, Analysis, Opinion, Culture, Trend">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta http-equiv="Cache-Control" content="no-cache">
+
+        <!--[if lt IE 9]><script src="http://news.chosun.com/dhtm/html5/html5shiv.min.js"></script><![endif]-->
+        <link rel="stylesheet" type="text/css" href="//weeklybiz.chosun.com/dhtm2019/css/swiper.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/weekly_style.css">
+        <link rel="stylesheet" type="text/css" href="css/weekly_list_style.css">
+        <link rel="stylesheet" type="text/css" href="css/weekly_search_style.css">
+
+        <script src="//weeklybiz.chosun.com/dhtm2019/js/jquery-1.9.1.min.js"></script> 
+        <script src="//weeklybiz.chosun.com/dhtm2019/js/swiper.min.js"></script>
+    </head>
+    <body>
+
+        <a id="top"></a>
+
+        <div id="wrapper">
+            <script>
+            //chosun.com simple gnb var
+            var csmgsgnbWidth = "1196", //사이트 내 콘텐츠 너비값 (기본값 : 1196px)
+                csmgsgnbLogin = "N", //로그인 버튼 사용 여부 (기본값 : N)
+                csmgsgnbSearch = "N"; //검색 버튼 사용 여부 (기본값 : N)
+            </script>
+
+            <script src="http://news.chosun.com/ui/js/csmgs_simple_gnb.js"></script>
+
+            <script src="js/weeklybiz_gnb_pkg.js"></script>
+            
+            <div class="sch_header">
+                <a class="mhome_btn" href="#">홈</a>
+                <h1>검색</h1>
+                <a class="mclose_btn" href="#">검색 닫기</a>
+            </div>
+
+            <div class="sch_area" id="sch_area_id">
+                <div class="sch_inputbox">
+                    <form method="get" id="id_searchForm" name="frm" action="http://weeklybiz.chosun.com/svc/wb_search.html?query=" target="_self" accept-charset="utf-8" onsubmit="goSearch();return false">
+                        <fieldset>
+                            <legend>통합검색</legend>
+                            <span class="InputOutline"><input type="text" value="" class="searchTerm" id="query" name="query" title="검색어 입력" onfocus="s_clear()" placeholder="검색어를 입력하세요." autocomplete="off"><input type="submit" alt="Search" title="Search" class="searchBtn" value="Search"><a href="javascript:void(0)" class="closeBtn" id="search_close_id">닫기</a></span>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <div class="sch_cont" id="sch_cont_id">
+                <div class="inner">
+                    <div class="sch_l_area no">
+                        <!--검색결과 없는 경우 sch_l_area 태그에 class="no" 추가!-->
+                        <div class="sch_head">
+                            <div class="result_count">
+                                <h2>검색결과</h2>
+                                <div class="count_box">0건</div>
+                            </div>
+                        </div>
+                        
+                        <div class="sch_result">
+                            <h3 class="result_none"><strong>''</strong>에 대한 검색 결과가 없습니다.</h3>
+                            <ul class="result_none_text">
+                                <li>단어의 철자가 정확한지 확인해 보세요.</li>
+                                <li>한글을 영어로 혹은 영어를 한글로 입력했는지 확인해 보세요.</li>
+                                <li>검색어의 단어 수를 줄이거나, 보다 일반적인 검색어로 다시 검색해 보세요.</li>
+                                <li>두 단어 이상의 검색어인 경우, 띄어쓰기를 확인해 보세요.</li>
+                            </ul>
+                        </div>
+                        <div class="csh_info">
+                            <p>원하는 검색 결과가 아니시라면 <a href="//nsearch.chosun.com/search/total.search?query=&cs_search=gnbtotal">조선닷컴 통함검색</a> 을 이용해 보세요!</p>
+                        </div> 
+                    </div>
+                    
+                    <div class="sch_r_area">
+                        <!--weekly 2019 list & search right area 공통 js-->
+                        <script src="js/weekly_r_area.js"></script>
+                    </div>
+                </div>
+            </div>
+
+            <!--footer area -->
+            <script src="js/weeklybiz_footer_pkg.js"></script>
+            <!--footer area end-->
+
+        </div>
+    </body>
+</html>
