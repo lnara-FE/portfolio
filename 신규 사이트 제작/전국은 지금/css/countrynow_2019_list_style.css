@@ -63,7 +63,7 @@ ul.paginate_num li a.next {background-position: -275px -50px;}
 
 
 @media all and (max-width: 1198px){
-  body, input, button, textarea {font-family: 'Apple SD Gothic Neo',맑은 고딕, 'Malgun Gothic', AppleSDGothicNeo-Regular ,나눔고딕, 돋움, Dotum, 굴림, Gulim,sans-serif; color: #000; letter-spacing:0 }
+  body, input, button, textarea {font-family: 'Apple SD Gothic Neo', 맑은 고딕, 'Malgun Gothic', AppleSDGothicNeo-Regular, 나눔고딕, 돋움, Dotum, 굴림, Gulim, sans-serif; color: #000; letter-spacing:0 }
   .ad_top {display: none;}
   .sub_header .header_inner, .cn_tab_artlist {width: auto;}
   .sub_header {height: 45px;}
