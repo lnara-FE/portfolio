@@ -21,11 +21,9 @@ document.write(
                     '<li><a href="https://members.chosun.com/cms_user/teenager/index.jsp" target="_blank">청소년보호정책(책임자: 우진형)</a></li>'+
                 '</ul>'+
             '</div>'+
-            //<!-- f_left end -->
             '<div class="bot">'+
                 '<p class="addr_copy copy">Copyright 조선일보 All rights reserved.</p>'+
             '</div>'+
-            //<!-- footer bot end -->
         '</div>'+
     '</div>'+
     '<div class="weekly_footer_m">Copyright 조선일보 All rights reserved.</div>'+
