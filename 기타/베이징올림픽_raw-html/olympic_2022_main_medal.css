@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+.olympic-medal-b {display: flex; align-items: flex-start; width: 100%; height: 100px; padding: 12px 20px; color: #fff; justify-content:center; background: url("//image.chosun.com/olympic2022/main_medal_box.png")no-repeat; background-size: cover; background-position: center 100%; overflow: hidden; box-sizing: border-box;}
+.olympic-medal-b .medal_tit {margin: 0; font-size: 18px; line-height: 1.39; font-family: 'ChosunGothic';}
+.olympic-medal-b .medal_tit>strong {display: block; margin-top: 2px; font-family: 'ChosunMGothicBold'; font-weight: bold; white-space: nowrap;}
+.olympic-medal-b .medal_num {position: relative; display: flex; align-items: center; margin: 0; padding: 0;}
+.olympic-medal-b .medal_num, .olympic-medal-b .medal_num li {list-style: none;}
+.olympic-medal-b .medal_num li::before {content: unset;}
+.olympic-medal-b .medal {display: flex; justify-content: center; align-items: center; width: 52px; height: 52px; margin-left: 12px; font-size: 24px; font-family: 'Roboto', sans-serif; font-weight: bold; box-shadow: 2px 1px 8px 0 rgba(73, 66, 66, 0.15); border-radius: 50%;}
+.olympic-medal-b .medal.gold {background: url("//image.chosun.com/olympic2022/ic-medal-gold.png")no-repeat; background-size: cover;}
+.olympic-medal-b .medal.silver {background: url("//image.chosun.com/olympic2022/ic-medal-silver.png")no-repeat; background-size: cover;}
+.olympic-medal-b .medal.bronze {background: url("//image.chosun.com/olympic2022/ic-medal-bronze.png")no-repeat; background-size: cover;}
+.olympic-medal-b .medal_num_sum {position: absolute; right: 0; bottom: -26px; font-size: 14px; white-space: nowrap; font-family: 'ChosunGothic';}
+.olympic-medal-b .medal_num_sum>b {font-family: 'ChosunMGothicBold';}
+
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
+  .olympic-medal-b  {height: 74px; padding: 9px 12px;}
+  .olympic-medal-b .medal_tit {font-size: 14px; line-height: 1.43;}
+  .olympic-medal-b .medal {width: 38px; height: 38px; margin-left: 10px; font-size: 18px;}
+  .olympic-medal-b .medal+.medal {margin-left: 8px;}
+  .olympic-medal-b .medal_num_sum {bottom: -20px; font-size: 12px;}
+}

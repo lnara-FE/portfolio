@@ -1,0 +1,131 @@
+@charset "utf-8";
+#olympic-medal{max-width: 302px;margin: 0 auto;background-color:#fff;border:1px solid #f7f7f7;}
+#olympic-medal.rio{border-bottom: none;}
+.medal-title{display:flex;align-items: center;padding-left:12px; height: 46px; background: url('//image.chosun.com/olympic2022/medal-box.png') no-repeat;background-size: cover; color:#fff}
+.medal-title b{font-size: 18px;font-family: "ChosunMGothicBold",sans-serif}
+/* .medal-list{padding: 0 16px;} */
+.medal-list caption{display: none;}
+.medal-list table{width: 100%;padding: 0;margin: 0;border-spacing: 0;}
+.medal-list th,
+.medal-list td{font-size: 15px;text-align:center;color:#222;}
+.medal-list th{padding:10px 0;font-family:"ChosunGothic",sans-serif}
+.medal-list td{padding:8px 0;border-bottom: 1px solid #f7f7f7;}
+.medal-list tbody tr:nth-of-type(1),
+.medal-list tbody tr:nth-of-type(1) figcaption{font-family: "ChosunMGothicBold",sans-serif}
+.medal-list tbody tr:nth-of-type(1) td{padding-top:4px;}
+.medal-list td.gold-medal,
+.medal-list td.silver-medal,
+.medal-list td.bronze-medal,
+.medal-list td.total-medal{font-size: 16px;}
+.medal-list th.country-name{text-align: left;padding-left: 36px;}
+.medal-list th.silver-medal,
+.medal-list th.bronze-medal,
+.medal-list td.silver-medal,
+.medal-list td.bronze-medal,
+.medal-list th.total-medal,
+.medal-list td.total-medal{padding-left: 11px;}
+
+.medal-list td.total-medal{text-align: right;}
+
+
+.medal-list td.order{font-family: "ChosunMGothicBold",sans-serif;font-size: 16px;}
+.medal-list tr.korea{font-family: "ChosunMGothicBold",sans-serif;background-color: rgba(133, 211, 245, 0.12);}
+.medal-list tr.korea figcaption{font-family: "ChosunMGothicBold",sans-serif;}
+.medal-list figure{display: flex;align-items: center;}
+.medal-list figcaption{margin-left: 6px;}
+.medal-list .flag-img {display: flex;width:28px;height:28px;}
+.medal-list .flag-img img{border-radius:100%;width: 100%;border:1px solid #eaeaea}
+.olympic-update-time{padding:12px 16px;}
+.olympic-update-time dl{margin:0;display: flex;align-items: center;justify-content: flex-end;font-size: 12px;color: #999;flex-wrap: wrap;}
+.olympic-update-time dt,.olympic-update-time dd{margin: 0;}
+.olympic-update-time dt{padding-right: 17px;position: relative;}
+.olympic-update-time dt::after{content:'';position:absolute;right:8px; top:50%; margin-top:-6px;width: 1px;background-color:#eaeaea;height: 12px;}
+.olympic-update-time dd:nth-child(3){flex-basis: 100%;text-align: right;padding-top: 2px;}
+
+.medal-list th:first-child, 
+.medal-list td:first-child{padding-left:16px;}
+.medal-list th:last-child,
+.medal-list td:last-child{padding-right: 16px;}
+.medal-list td.country-name{padding-left:2px;}
+
+@media only screen and (max-width: 1295px) {
+  /* .medal-list{padding: 0 12px;} */
+  .medal-list .flag-img {display:none;}
+  /* .medal-list th.silver-medal,
+  .medal-list th.bronze-medal,
+  .medal-list td.silver-medal,
+  .medal-list td.bronze-medal{padding-left: 12px;} */
+  .medal-list th.country-name{padding-left: 8px;}
+
+
+  .medal-list th.silver-medal, 
+  .medal-list th.bronze-medal, 
+  .medal-list td.silver-medal, 
+  .medal-list td.bronze-medal, 
+  .medal-list th.total-medal, 
+  .medal-list td.total-medal{padding-left: 10px;}
+
+
+  .medal-list th:first-child, 
+  .medal-list td:first-child{padding-left:10px;}
+  .medal-list th:last-child,
+  .medal-list td:last-child{padding-right: 10px;}
+  .medal-list td.country-name{padding-left:0px;}
+
+
+  .medal-list td.gold-medal,
+  .medal-list td.silver-medal,
+  .medal-list td.bronze-medal,
+  .medal-list td.total-medal{font-size: 14px;}
+
+  .medal-list th, .medal-list td{font-size:14px;}
+
+  .medal-list figcaption{margin-left:0}
+  .medal-list td.order{font-size: 14px;}
+}
+
+@media only screen and (max-width: 767px) {
+  #olympic-medal{max-width: 326px;}
+  /* .medal-list{padding: 0 16px;} */
+  .medal-list .flag-img {display:flex;}
+  .medal-list th.country-name{padding-left: 36px;}
+  .medal-list th.silver-medal,
+  .medal-list th.bronze-medal,
+  .medal-list td.silver-medal,
+  .medal-list td.bronze-medal{padding-left: 18px;}
+
+  .medal-list tbody tr:nth-of-type(10),
+  .medal-list tbody tr:nth-of-type(9),
+  .medal-list tbody tr:nth-of-type(8),
+  .medal-list tbody tr:nth-of-type(7),
+  .medal-list tbody tr:nth-of-type(6),
+  .medal-list tbody tr:nth-of-type(5){display: none;}
+  .medal-list tbody tr.korea{display: table-row;}
+
+  .medal-list th:first-child, 
+  .medal-list td:first-child{padding-left:16px;}
+  .medal-list th:last-child,
+  .medal-list td:last-child{padding-right: 18px;}
+  .medal-list td.country-name{padding-left:8px;}
+
+
+  .medal-list td.gold-medal,
+  .medal-list td.silver-medal,
+  .medal-list td.bronze-medal,
+  .medal-list td.total-medal{font-size: 16px;}
+
+  .medal-list th, .medal-list td{font-size:15px;}
+
+  .medal-list figcaption{margin-left:6px}
+
+
+  .medal-list td.order{font-size: 16px;}
+
+
+  .medal-list th.silver-medal, 
+  .medal-list th.bronze-medal, 
+  .medal-list td.silver-medal, 
+  .medal-list td.bronze-medal, 
+  .medal-list th.total-medal, 
+  .medal-list td.total-medal{padding-left: 18px;}
+}

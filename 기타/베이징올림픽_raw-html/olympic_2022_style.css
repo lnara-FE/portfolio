@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+@import url('//fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+/* layout tune */
+.secion-special {overflow-x: hidden;}
+.secion-special .layout-main {min-height: auto;}
+
+/* olympic-gnb */
+.olympic-gnb {display: flex; justify-content: space-between; align-items: flex-start; max-width: 1264px; margin: 0 auto; padding-top: 40px; box-sizing: border-box; font-family: 'ChosunGothic';}
+.olympic-logo img {display: block; width: 406px; height: 48px;}
+.olympic-logo .olympic-date {display: block; margin-top: 12px; color: #fff; font-size: 15px;}
+
+.olympic-medal {display: flex; align-items: center; color: #fff;}
+.olympic-medal.none {display: none;}
+.olympic-medal .medal_tit {margin: 0; font-size: 18px; line-height: 1.2;}
+.olympic-medal .medal_tit>strong {display: block; margin-top: 2px; font-family: 'ChosunMGothicBold'; font-weight: bold; white-space: nowrap;}
+.olympic-medal .medal_num {display: flex; align-items: center; margin: 0; padding: 0;}
+.medal {display: flex; justify-content: center; align-items: center; width: 52px; height: 52px; margin-left: 12px; font-size: 24px; font-family: 'Roboto', sans-serif; font-weight: bold; box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.2); border-radius: 50%;}
+.medal:before {content: unset;}
+.medal.gold {background: url("//image.chosun.com/olympic2022/ic-medal-gold.png")no-repeat; background-size: cover;}
+.medal.silver {background: url("//image.chosun.com/olympic2022/ic-medal-silver.png")no-repeat; background-size: cover;}
+.medal.bronze {background: url("//image.chosun.com/olympic2022/ic-medal-bronze.png")no-repeat; background-size: cover;}
+
+
+/* olympic today-preview */
+.today-preview {display: flex; justify-content: flex-start; max-width: 1264px; height: 125px; margin: 0 auto; padding: 28px 0 16px; overflow-x: scroll; -ms-overflow-style: none; scrollbar-width: none; box-sizing: content-box;}
+.today-preview::-webkit-scrollbar {display: none;}
+.today-preview::before {content: ''; display: block; min-width: 4px; height: 125px; background: #1782df;} /*blue bar*/
+.today-preview_info {position: relative; max-width: 160px; padding: 20px 32px 28px 22px; background: #fff; border: 1px solid #eaeaea; white-space: nowrap; box-sizing: border-box;}
+.today-preview_info::after {content: ''; position: absolute; top: -1px; right: -21px; display: block; width: 20px; height: 125px; background: linear-gradient(to right, #999999 -25%, rgba(255, 255, 255, 0) 50%); z-index: 99;}
+.today-preview_info .info_tit {position: relative; display: block; margin-bottom: 8px; color: #222; font-size: 20px; font-family: 'NotoSansKR', sans-serif; font-weight: bold; line-height: 1.3;}
+.today-preview_info .info_tit::after {content: ''; position: absolute; display: inline-block; width: 24px; height: 24px; margin-left: 4px; background: url("//image.chosun.com/olympic2022/icon-arrow-arrow.svg")no-repeat; background-size: contain;}
+.today-preview_info .info_tit>strong {display: block; color: #1782df;}
+.today-preview_info .info_date {display: block; color: #707070; font-size: 14px;}
+
+.today-preview_sports {display: flex; margin: 0; padding: 0;}
+.today-sports_item {width: 275px; margin: 0 auto; padding: 0 20px 16px; text-align: center; word-break: keep-all; border: 1px solid #eaeaea; background: #fff;}
+.today-sports_item::before {content: unset;}
+.today-sports_item>a {display: block; color: #222; pointer-events: none; cursor: default;}
+.today-sports_item>a[href*="https"] {pointer-events: auto; cursor: pointer;}
+.today-sports_item .sports-tit {display: flex; justify-content: center; align-items: center; margin: 0 -20px; padding: 8px 0; color: #1782df; font-size: 14px; font-family: "ChosunMGothicBold"; font-weight: bold; border-bottom: 1px solid #eaeaea;}
+.today-sports_item .sports-tit>img {display: block; width: 22px; height: 22px; margin-right: 4px;}
+.today-sports_item .sports-info {margin: 0 auto; font-size: 14px; font-family: "ChosunMGothicBold"; font-weight: bold;}
+.today-sports_item .sports-info .sports-date {display: inline-block; flex-basis: 0; margin-top: 8px; color: #1782df; font-size: 14px;}
+.today-sports_item .sports-info .sports-desc {display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; height: 2.66em; margin: 8px auto 0; color: #707070; font-size: 15px; line-height: 1.33; overflow: hidden;}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .olympic-gnb {padding: 40px 36px 0;}
+  .olympic-logo img {width: 355px; height: 42px;}
+  .today-preview {padding: 28px 36px 23px;}
+}
+
+@media only screen and (max-width: 767px) {
+  .olympic-gnb {align-items: center; padding: 16px 16px 0;}
+  .olympic-logo img {width: 187px; height: 22px;}
+  .olympic-logo .olympic-date {display: none;}
+
+  .olympic-medal {flex-direction: column; height: auto;}
+  .olympic-medal .medal_tit {display: flex; margin-bottom: 4px; font-size: 14px; line-height: 1.5;}
+  .olympic-medal .medal_tit>strong {margin: 0 0 0 4px;}
+  .medal {width: 32px; height: 32px; font-size: 16px; margin: 0;}
+  .medal+.medal {margin-left: 8px;}
+
+
+  .today-preview  {height: 88px; padding: 16px 16px 8px;}
+  .today-preview::before {height: 88px;}
+  .today-preview_info {max-width: 100%; padding: 12px 12px 18px 12px;}
+  .today-preview_info::after {height: 88px;}
+  .today-preview_info .info_tit {margin-bottom: 4px; font-size: 14px;}
+  .today-preview_info .info_tit::after {width: 20px; height: 20px; bottom: 0;}
+  .today-preview_info .info_date {font-size: 12px;}
+
+  .today-sports_item {width: 182px; padding: 0 12px 12px; text-align: left;}
+  .today-sports_item .sports-tit {margin: 0 -12px; padding: 4px 0; font-size: 12px; line-height: 1.33;}
+  .today-sports_item .sports-tit>img {width: 16px; height: 16px;}
+  .today-sports_item .sports-info {display: flex; align-items: baseline;}
+  .today-sports_item .sports-info .sports-desc {margin-left: 8px; height: 2.86em; font-size: 14px; line-height: 1.43;}
+}

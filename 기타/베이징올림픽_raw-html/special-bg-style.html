@@ -1,0 +1,68 @@
+<!--special-gnb bg default-->
+<style>
+  .special-header {
+    background: url("//image.chosun.com/olympic2022/beijing-gnb-bg.png") no-repeat;
+    background-position: center 40px;
+    background-size: auto 314px;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .special-header {
+      background-position: center 48px;
+      background-size: auto 200px;
+    }
+  }
+</style>
+
+<!--special-gnb bg native-->
+<style>
+  .special-header {
+    background: url("//image.chosun.com/olympic2022/beijing-gnb-bg.png") no-repeat;
+    background-position: center;
+    background-size: auto 314px;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .special-header {
+      background-size: auto 200px;
+    }
+  }
+</style>
+
+<!--special-wide bg-->
+<style>
+.special-wide {
+  max-width: 2560px;
+  margin: 0 auto;
+  background: url("//image.chosun.com/olympic2022/special-wide-bg.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .special-wide>.layout--container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .special-wide {
+    background: url("//image.chosun.com/olympic2022/special-wide-bg-m.png") no-repeat;
+    background-size: 100% 100%;
+  }
+  .special-wide>.layout--container {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .special-wide {
+    background: #f7f7f7;
+  }
+  .special-wide>.layout--container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+</style>
