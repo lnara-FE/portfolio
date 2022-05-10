@@ -27,6 +27,6 @@ document.write(
         '</div>'+
     '</div>'+
     '<div class="weekly_footer_m">Copyright 조선일보 All rights reserved.</div>'+
-    //<!-- tablet_mobile footer -->
+    //<!-- tablet&mobile footer -->
 '</footer>'
 );

@@ -1,0 +1,332 @@
+@charset "UTF-8";
+
+/* new weeklybiz 2019.06 */
+@import url("//news.chosun.com/dhtm/css/css_reset_2018.css");
+@import url('//fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+KR&display=swap');
+@import url('//weeklybiz.chosun.com/dhtm2019/css/weekly_style.css');
+
+/* float 해제 - 가상클래스 */
+.clear_fix:after {content:""; display: block; clear: both;}
+
+/* global */
+body, input, button, textarea {font-family: AppleSDGothicNeo-Regular, '맑은 고딕', 'Malgun Gothic', 나눔고딕, 돋움, Dotum, 굴림, Gulim, 'Apple SD Gothic Neo', sans-serif; color: #000;}
+a,a:visited{font-size: inherit; color: inherit; text-decoration: none;}
+.art_tit_menu span::before {content: '#'; margin-right: -3px; /* margin-right: 1.5px; */} /* 해시태그 샵 */
+
+
+/* article  - search tune */
+.csh_search_area.vis {z-index: 999 !important;}
+.csh_search_area {padding: 0; box-sizing: content-box;}
+
+
+/* layout, img size tune */
+dt {font-weight: normal;}
+#csContent {position: relative; max-width: 1196px; width: 100%; margin: 0 auto;}
+.sticky_wrapper {min-width: 0;}
+.news_article {width: 100%; margin: 0;}
+.news_left_aside {width: 15.96%; padding-top: 30px;}
+.news_body {width: 58.52%;}
+.news_imgbox {width: 700px; margin: 0 auto; margin-bottom: 20px;}
+.news_imgbox img {max-width: 700px; width: 700px;}
+.news_imgbox.big_img img {max-width: 1196px;}
+ul.news_left_aside_sns {width: 100%;}
+.csh_search_area .csh_search_inputbox {width: 100%; border-bottom: none;}
+
+
+/* article title */
+.newsq_title {min-width: 0; height: auto; padding-top: 35px; background: #fff; border-bottom: 1px solid #d7d7d7;}
+.newsq_title h1 {margin:0; font-size: 42px; line-height: 1.38; color: #222; word-break: keep-all; overflow: hidden;}
+.newsq_title .news_title_text {max-width: 890px; padding: 20px 0 35px;}
+.newsq_title .news_title_author li {display: inline-block; margin-right: -6px; padding: 0 10px; color: #777;}
+.newsq_title .news_title_author li a {color: #777;}
+.newsq_title .news_title_author li+li {background: url('//image.chosun.com/weeklybiz/imges2019/corp_line.gif') no-repeat left 5px;}
+.news_body .news_date {margin: 30px 0; padding-top: 0;}
+.news_body .par h4 {font-size: 18px; font-weight: bold;}
+.news_body .par h4::before {width: 30px; height: 2px; background: #000; top: -10px;}
+.news_title {overflow: visible;}
+.art_tit_menu {max-width: 890px; margin: 0 auto; font-size: 20px; font-family: 'Noto Serif KR', serif; text-align: center;}
+.art_tit_menu strong {font-weight:500; color:#24a4e6;} 
+.art_tit_menu span {padding-left: 13px; color:#777; font-weight: 500}
+
+
+/* article tool - PC */
+.newsq_title .news_title_cat, 
+.newsq_title .news_title_tools {display: block;}
+.font_set .font_set_family {display: none;}
+ul.news_title_tools {top: 30px;}
+ul.news_title_tools li a.share {display: none;}
+.news_pdf {position: absolute; top: -53px; right: 0; display: inline-block; display: none;}
+.news_pdf a{display: block; width: 52px; height: 24px; font-size: 0;background: url('//image.chosun.com/weeklybiz/imges2019//weekly_icon.png') no-repeat; background-size: 250px; background-position: -50px -275px;}
+ul.news_title_tools li > a.voice:after {background: url('//image.chosun.com/weeklybiz/imges2019//weekly_icon.png') no-repeat; background-position: 0 -750px;}
+ul.news_title_tools li > a.voice.onplay:after {background: url('//image.chosun.com/weeklybiz/imges2019//voice.gif') no-repeat;}
+
+
+/* article slide gnb & progress_bar */
+.news_copyright_links {color: #777;}
+.head_inner {overflow: hidden;}
+.csh_art_min {height: 48px; border-bottom: 3px solid #eaeaea; transition: none;}
+.csh_min_logo {width: 125px; height: 45px; margin-right: 65px;}
+.csh_min_logo:after {top: 15px; width: 125px; height: 15px; background: url("//image.chosun.com/weeklybiz/imges2019/logo_2x.png") no-repeat; background-size: 100%;} 
+.csh_min_title {line-height: 45px;}
+.csh_min_title .csh_min_title_text:before {margin: 0 11px;}
+.csh_min_count {position: relative; display: inline-block; width: auto; height: 25px; padding-top: 10px; font-size: 0; line-height: 1; white-space: nowrap;}
+/* 
+.csh_min_count a:before,
+.csh_min_count a.count_like:before,
+.csh_min_count a.count_like.liked:before,
+.csh_min_count a.count_like.reliked:before {margin-top: -2px;}
+*/
+.csh_min_count a.count_like.liked:before,
+.csh_min_count a.count_like.reliked:before {background-position: -125px -50px;}
+.csh_min_count a span {margin-left: 6px;}
+/*progressbar*/
+.news_progress{content: ""; position: fixed; top: 45px; left:0; display: table; table-layout: fixed; width: 100%; height: 3px; margin-bottom: 0px; overflow: hidden; z-index:10;}
+.news_progress_bar {float: left; max-width: 100%; width: 0%; height: 100%; background-color:#24a4e6; -webkit-transition: width .5s ease; -o-transition: width .5s ease; transition: width .5s ease; z-index:99;}
+
+
+/* weekly rec - 기사면 위클리비즈 추천 기사 */
+.weekly_rec_wrap {max-width: 700px; margin-left: 186px; padding-bottom: 25px;}
+.weekly_rec_wrap h3.tit {padding-bottom: 12px; font-size: 18px; letter-spacing: -1.35px; font-weight: bold; border-bottom: 1px solid #222;}
+.weekly_rec {width: 100%; overflow: hidden;}
+.weekly_rec dl+dl {margin-left: 2.79%;} 
+.weekly_rec dl:nth-child(2n+1) {margin-left: 0;}
+.weekly_rec dl.weekly_rec_item {float: left; width: 48.6%; height: 58px; padding: 15px 0; border-bottom: 1px solid #eaeaea; overflow: hidden;}
+.weekly_rec dl.weekly_rec_item:nth-child(5) {border-bottom: none;}
+.weekly_rec dl.weekly_rec_item:last-child {border-bottom: none;}
+.weekly_rec dl.weekly_rec_item dt {max-height: 2.6em; line-height: 1.3; overflow: hidden;}
+.weekly_rec dl.weekly_rec_item dd.thumb {float: left; position: relative; width: 102px; height: 58px; margin-right: 15px; text-align: center; overflow: hidden;}
+.weekly_rec dl.weekly_rec_item dd.thumb a {display: block; width: 100%; height: 100%; font-size: 0; line-height: 0; background-color:#eaeaea;}
+.weekly_rec dl.weekly_rec_item dd.thumb img {position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; width: 100%; height: auto; overflow: hidden;}
+.weekly_rec dl.weekly_rec_item dd.pack {margin-top: -2px; margin-bottom: 6px; font-size: 13px; font-family: 'Noto Serif KR', serif; color: #999; font-weight: 500; vertical-align: top;}
+.weekly_rec dl.weekly_rec_item dd.pack .cate {padding-right: 10px; color: #24a4e6;}
+
+
+/* weekly hashtag - 기사면 위클리비즈 해시태그 기사 */
+.idea_art_wrap {position: relative; max-width: 700px; margin-left: 186px;}
+.idea_art_wrap a.more {position: absolute; right: 15px; top: 8px; font-size: 14px; line-height: 1.5; color: #777;}
+.idea_art_wrap h3.tit {padding-bottom: 11px; font-size: 18px; font-family: 'Noto Serif KR', serif; border-bottom: 1px solid #222;}
+.idea_art_wrap h3.tit::before {content: "#"; margin-right: 1px;}
+.idea_art_wrap .idea_art {padding-top: 19px;}
+.idea_art_wrap dl {float: left; width: 31.42%; overflow: hidden;} 
+.idea_art_wrap dl + dl {margin-left: 2.87%;}
+.idea_art_wrap dl dd.thumb {position: relative; max-width: 220px; height: 125px; margin-bottom: 8px; text-align: center; overflow: hidden;}
+.idea_art_wrap dl dd.thumb a {position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: block; width: 100%; height: 100%; margin: auto; font-size: 0; line-height: 0; background: #eaeaea;}
+.idea_art_wrap dl dd.thumb img {position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: auto; max-height: 125px;  margin: auto; overflow: hidden;}
+.idea_art_wrap dl dt {max-height: 3.9em; overflow: hidden;}
+.idea_art_wrap dl dd.thumb.no img {width: 100%; height: 100%;} /* 이미지 없는 경우 .thumb img 100% */
+.idea_art_wrap .swiper-container {padding-bottom: 30px}
+
+
+/* weekly miss art - 기사면 위클리비즈 놓치면 안되는 기사 */
+.news_missart {position: fixed; left: 50%; top: 100px; width: 300px; height: 290px; margin-left: 25%; padding: 0 15px; border: 2px solid #24a4e6; background: #fff; visibility: hidden; opacity: 0; transition: all ease-out .8s; box-sizing: border-box; z-index: 999;}
+.news_missart.vis {visibility: visible; opacity: 1;} 
+.news_missart h3{position: absolute; top: -20px; left: 38px; width: 218px; height: 30px;font-size: 0; background: url('//image.chosun.com/weeklybiz/imges2019/miss_art_ban.png') no-repeat;}
+.news_missart .missart_item_wrap {display: block;}
+.news_missart .missart_item {display: table; min-height: 95px; padding: 10px 0; text-align: left; box-sizing: border-box; overflow: hidden;}
+.news_missart .missart_item p {display: table-cell; vertical-align: middle;}
+.news_missart div.missart_item+div.missart_item {border-top: 1px solid #eaeaea;}
+.news_missart .missart_item .thumb {position: relative; display: inline-block; width: 70px; height: 70px; margin-right: 10px; border-radius: 100%; overflow: hidden;}
+.news_missart .missart_item .thumb a {display: inline-block; width: 100%; height: 100%; font-size: 0; line-height: 0;}
+.news_missart .missart_item .thumb img {position: absolute; left: 50%; top: 0; transform: translateX(-50%); display: block; width: 100%;height: auto; min-height: 70px; overflow: hidden;}
+.news_missart a.miss_close_btn {display: inline-block; position: absolute; right: 0; top: -40px; width: 24px; height: 24px; background: url('//image.chosun.com/weeklybiz/imges2019/art_pop_close_btn_2x.png') no-repeat;background-size: 100%; font-size: 0;}
+
+
+/* 100자평 - PC */
+.news_cmt {padding-top: 47px;}
+.news_comment {width: 887px; border-top: 1px solid #222;}
+.news_comment .sec_con {float: right;}
+.news_comment .sec_tit h3 {padding-left: 0;}
+
+/* weekly article ad - PC */
+.news_aside {position: absolute; top: 96px; right: 0; /* width: 25.5%; */ width: 160px; padding-top:0; text-align: center;}
+.news_aside .news_aside_ad {width: 160px; height: 600px; margin: 0 auto;}
+.article_bottom {max-width: 887px; padding-left: 186px; box-sizing: border-box;}
+.article_bottom .article_bottom_ad {width: 720px; height: 90px; margin: 0 auto;}
+/* popIn 광고 pc */
+#_popIn_recommend {max-width: 700px; margin: 0 auto; padding-left: 186px;}
+#_popIn_recommend::before {content: ""; min-width: 1196px; background: orangered; display: block;}
+
+
+/* article bottom share button - mobile */
+.bottom_share>a.share {display: none;}
+
+
+/* weekly article footer tune */
+footer .inner {margin-top: 0; /* border-top: none; */}
+
+
+@media all and (max-width: 959px){
+/* tablet ~ article */
+body, input, button, textarea {font-size: 100%; letter-spacing: -0.018em; color: #000;}
+
+header .header_top .sound_ban {display: none;} 
+
+.news_article {width: 100%;}
+.news_body {width: 100%; font-size: 17px; line-height: 1.5; color: #222;}
+.news_body:before {background: none;}
+.news_body .news_date {margin: 11px 0 20px; font-size: 12px;}
+.news_body .news_date>span {display: block;}
+.news_body .news_subtitle {margin-bottom: 10px; padding: 0 15px; font-size: 88.2%; line-height: 1.5;}
+.news_body_all {border-bottom: 9px solid #eaeaea;}
+.news_body .par {margin-bottom: 0;}
+.news_body .par>div {margin-bottom: 0;}
+.news_copyright {display: none;}
+.art_tit_menu {max-width: 100%; padding: 0 15px; font-size: 15px; line-height: 1.33; text-align: left;}
+.art_tit_menu span {padding-left: 11px;}
+.newsq_title {padding-top: 16px; border-bottom: 1px solid #eaeaea;}
+.newsq_title h1 {font-size: 22px; line-height: 1.36; font-family: 'Noto Serif KR', serif; text-align: left;}
+.newsq_title .news_title_text {width: 100%; padding: 7px 15px 14px;}
+.newsq_title .news_title_author {margin-top: 14px; padding-top: 0;}
+.newsq_title .news_title_author li {margin-right: -4px; padding: 0 6px;}
+.newsq_title .news_title_author li:first-child {padding-left: 0;}
+.newsq_title .news_title_author li a {font-size: 15px; color: #999;}
+.news_title {display: block;}
+.news_pdf {top: -35px; right: 15px;}
+.news_pdf a {width: 44px; height: 20px; background-position: 0 -550px;}
+
+
+.news_rel dl dt a {font-size: 15px;}
+.news_imgbox {width: 100%; margin: 20px 0;}
+.news_imgbox img {width: 100%; max-width: 100%;}
+.news_imgbox figcaption {padding: 8px 15px 0; font-size: 70.6%;}
+
+
+/* article slide gnb & progress_bar */
+.csh_art_min {min-width: 0; height: 46px; border-bottom: 2px solid #eaeaea;}
+.head_inner {width: 100%; height: 100%;}
+.csh_min_logo {display: none;}
+.csh_min_title {display: none;}
+.mini_art_sns {float: right;}
+.mini_art_sns ul {line-height: 44px;}
+.mini_art_sns ul li {display: inline-block; vertical-align: middle; margin-right: 15px;}
+.mini_art_sns ul li a {display: block; width: 30px; height: 30px; background: url('//image.chosun.com/weeklybiz/imges2019/weekly_icon.png') no-repeat; background-size: 250px;}
+.mini_art_sns ul li a.kakao {background-position: -175px -175px;}
+.mini_art_sns ul li a.facebook {background-position: -175px -220px;}
+.mini_art_sns ul li a.twitter {background-position: -220px -220px;}
+.csh_min_count {float: left; height: 20px; padding-top: 13px;}
+.csh_min_count a {display: inline-block; height: 20px; margin-left: 15px; letter-spacing: normal;}
+.csh_min_count a:before {content: ""; display: inline-block; width: 20px; height: 20px; background: url('//m.chosun.com/img/mcs_ico_all.png') no-repeat 0px -150px; background-size: 250px}
+.csh_min_count a.count_like {margin-left: 13px;}
+.csh_min_count a.count_like:before {content: ""; display: inline-block; width: 20px; height: 20px; vertical-align: top; background: url('//m.chosun.com/img/mcs_ico_all.png') no-repeat -200px -175px; background-size: 250px;}
+.csh_min_count a.count_like.liked:before,
+.csh_min_count a.count_like.reliked::before {background-position: -25px -150px;}
+.csh_min_count a span {display: inline-block; height: 20px; margin-left: 0; line-height: 20px; font-size: 15px; line-height: 1; vertical-align: middle; color: #777;}
+.news_progress {top: 44px; height: 2px;}
+
+
+/* weekly rec - 기사면 위클리비즈 추천 기사 */
+.weekly_rec_wrap {max-width: 100%; margin-left: 0; padding: 20px 15px; border-bottom: 9px solid #eaeaea;}
+.weekly_rec_wrap h3.tit {padding-bottom: 0; border-bottom: none;}
+.weekly_rec dl.weekly_rec_item {width: 100%; margin: 0;}
+.weekly_rec dl.weekly_rec_item:nth-child(5) {border-bottom: 1px solid #eaeaea;}
+.weekly_rec dl.weekly_rec_item:last-child {padding-bottom: 0;}
+
+
+/* weekly hashtag - 기사면 위클리비즈 해시태그 기사 */
+.idea_art_wrap {max-width: 100%; margin-left: 0; padding: 20px 0 17px; border-bottom: 9px solid #eaeaea;}
+.idea_art_wrap h3.tit {padding: 0 15px 15px; border-bottom: none;}
+
+
+/*weekly miss art area - 기사면 위클리비즈 놓치면 안되는 기사*/
+.news_missart {top: auto; left: 0; bottom: 0; width: 100%; height: 155px; margin-left: 0; background-image: linear-gradient(to bottom, #24a4e6, #2472e6); border: none; padding: 8px 0 19px; box-sizing: border-box;}
+.news_missart h3 {position: static; width: 169px; height: 26px; margin-left: 15px; margin-bottom: 10px; background: url('//image.chosun.com/weeklybiz/imges2019/miss_art_ban_m_2x.png') no-repeat; background-size: 100%;}
+.news_missart>.swiper-container {padding: 0 15px; box-sizing: border-box;}
+.news_missart .missart_item {width: 80%; height: 86px; min-height: 0; padding: 0; line-height: 86px; background: #fff; border-radius: 42px;}
+.news_missart .missart_item .thumb {float: left; display: block; margin: 8px 0 8px 10px;}
+.news_missart .missart_item p {max-height: 3.99em; margin-top: -4px; padding: 0 22px; font-size: 15px; line-height: 1.33; overflow: hidden;}
+.news_missart .missart_item .thumb+p {padding: 0 22px 0 8px;}
+.news_missart div.missart_item+div.missart_item {border: none;}
+.news_missart a.miss_close_btn {right: 10px; width: 30px; height: 30px;}
+
+
+/* 100자평 - mobile */
+.news_comment {width: 100%; border-top: none;}
+.news_cmt {padding-top: 0;}
+
+/* .cmt_body {padding: 0;} */
+.cmt_go_all {padding: 16px 0;}
+.cmt_txt_input {margin-top: 0;}
+.cmt_write {padding: 0;}
+ul.cmt_help {padding: 10px 0;}
+
+
+/* article bottom share button - only mobile */
+.bottom_art_tool {position: relative; left: 50%; transform: translateX(-50%); display: inline-block; margin: 25px 0; padding: 0 !important; overflow: hidden;}
+.bottom_art_tool>div {float: left; line-height: 0;}
+.bottom_share>a.share{display: inline-block; width: 24px; height: 24px; text-indent: -9999px; background: url('//m.chosun.com/img/mcs_ico_all.png') no-repeat; background-position: -75px -150px; background-size: 250px; overflow: hidden;}
+.news_like {height: 24px; margin-left: 20px; margin-bottom: 0;}
+.news_like a.count_like {width: auto; height: 24px; line-height: normal;}
+.news_like a.count_like::before{width: 24px; height: 24px; margin-top: 1px; background: url('//m.chosun.com/img/mcs_ico_all.png') no-repeat -150px -150px; background-size: 250px;}
+.news_like a.count_like.liked:before,
+.news_like a.count_like.reliked::before {margin-top: 1px; background-position: -100px -150px;}
+.news_like a.count_like:hover::before {margin-top: 1px; background-position: -100px -150px;}
+.news_like a.count_like span.mlike_tit {font-size: 0; line-height: 0;}
+.bottom_art_tool .news_like a.count_like span.count {display: inline-block; width: auto; height: 20px; margin-left: 30px; font-size: 15px; line-height: 20px;}
+
+
+/* article tool - mobile*/
+ul.news_title_tools{top: 10px; right: 15px; display: block;}
+ul.news_title_tools li>a {margin-left: 14px;} 
+ul.news_title_tools li a {width: 20px; height: 20px;}
+ul.news_title_tools li a:after {display: inline-block; width: 20px; height: 20px; margin-left: 0; background: url('//image.chosun.com/weeklybiz/imges2019/weekly_icon.png') no-repeat; background-size: 250px;}
+ul.news_title_tools li a.voice {width: 69px; height: 21px;}
+ul.news_title_tools li a.voice.onplay {width: 80px; height: 21px;}
+ul.news_title_tools li a.voice::after {width: 69px; height: 21px; background: url('//image.chosun.com/weeklybiz/imges2019/weekly_icon.png') no-repeat; background-size: 250px;  background-position: -0px -525px;}
+ul.news_title_tools li a.voice.onplay::after {width: 80px; height: 21px; background: url('//image.chosun.com/weeklybiz/imges2019/voice.gif') no-repeat; background-size: 80px;}
+ul.news_title_tools li a.scrap:after {background-position: -75px -550px;}
+ul.news_title_tools li>a.font:after {background-position: -125px -550px !important;}
+ul.news_title_tools li a.share {display: inline-block;}
+ul.news_title_tools li a.share:after {display: inline-block; background-position: -100px -550px;}
+ul.news_title_tools li a.email {display: none;}
+ul.news_title_tools li a.print {display: none;}
+
+
+/* mobile article share */
+.art_share_box {display: none}
+.art_share_mask {position: fixed; top:0; right: 0; bottom: 0; left: 0; display: block; height: 100%; background: rgba(0,0,0,0.65); z-index: 100; display: none;}
+.art_share_layer {position: fixed; top: 120px; right: 0; left: 0; width: 290px; margin: 0 auto; padding-top: 35px; padding-bottom: 35px; background: #fff; z-index: 105; display: none;}
+.art_share_layer h5 {margin-bottom: 24px; font-size: 20px; color: #222; font-weight: normal; text-align: center;}
+.art_share_layer a.art_share_layer_close {position: absolute; top: 10px; right: 10px; display: block; width: 25px; height: 25px; font-size: 0; background: url('//m.chosun.com/img/mcs_ico_all.png') no-repeat -200px 0; background-size: 250px;}
+ul.art_share_button {padding: 0 35px; text-align: center;}
+ul.art_share_button li {display: inline-block; width: 70px; margin-bottom: 20px; text-align: center; vertical-align: top;}
+ul.art_share_button li a {display: inline-block; width: 50px; height: 50px; background: url('//m.chosun.com/img/mcs_ico_all.png') no-repeat; background-size: 250px; font-size: 0; vertical-align: top;}
+ul.art_share_button li a.btn_kat {background-position: 0 -525px;}
+ul.art_share_button li a.btn_fb {background-position: -55px -475px;}
+ul.art_share_button li a.btn_tw {background-position: -110px -475px;}
+ul.art_share_button li a.btn_gp {background-position: -165px -475px;}
+ul.art_share_button li a.btn_nb {background-position: -55px -525px;}
+ul.art_share_button li a.btn_email {background-position: -110px -525px;}
+.art_share_urlbox {position: relative; height: 30px; margin: 0 35px; padding-right: 60px; background: #f8f8f8; border: solid 1px #d7d7d7; overflow: hidden; box-sizing: border-box;}
+.art_share_urlbox .share_url {display: block; height: 24px; padding-left: 5px;font-size: 14px; line-height: 22px; color: #999; white-space: nowrap; text-overflow: ellipsis; background: #f8f8f8; border: 0; overflow: hidden; -webkit-border-radius: 0; -webkit-appearance: none;}
+.art_share_urlbox .art_share_urlbtn {position: absolute; top: 0; right: 0; display: block; width: 60px; height: 28px; font-size: 12px; line-height: 28px; text-align: center; background: #fff; border-left: solid 1px #d7d7d7; -webkit-appearance: none;}
+.csh_search_area .csh_search_inputbox .InputOutline .searchBtn {margin-top: 0;}
+
+
+/* weeklybiz article ad - tablet */
+.news_aside {position: static; top: 0; width: 100%; padding: 0; border-top: 9px solid #eaeaea; border-bottom: 9px solid #eaeaea;} 
+.news_aside .news_aside_ad {width: 728px; height: 90px;}
+.article_bottom {max-width: 100%; width: 100%; padding-left: 0;}
+.ext_embed.fixed iframe[src*="youtube"] {left: auto!important; bottom: auto!important; width: auto!important; height: auto!important; margin-left: 0!important;}
+#_popIn_recommend {padding: 0 15px;}
+}
+
+
+@media all and (max-width: 739px){
+    /*weekly idea art - 기사면 위클리비즈 idea & trend*/
+    .idea_art_wrap h3.tit {border-bottom: none;}
+    .idea_art_wrap a.more {display: none;}
+    .idea_art_wrap .swiper-container {padding: 0 15px;}
+    .idea_art_wrap .idea_art {padding-top: 0;}
+    .idea_art_wrap dl {width: 45%; min-height: 138px;}
+    .idea_art_wrap dl+dl {margin: auto;}
+    .idea_art_wrap dl dd.thumb {position: relative; height: 90px; margin-bottom: 10px; padding-bottom: 0;}
+    .idea_art_wrap dl dd.thumb img {width: auto; max-height: 90px;}
+    .idea_art_wrap dl dt {max-height: 2.6em; font-size: 15px;}
+
+
+    /* weeklybiz article ad - mobile */
+    .news_aside {padding: 0; border-top: 9px solid #eaeaea;}
+    .news_aside .news_aside_ad {width: 300px; height: 250px;}
+    .article_bottom .article_bottom_ad {width: 300px; height: 250px;}
+}
+

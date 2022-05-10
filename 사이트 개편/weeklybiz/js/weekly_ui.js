@@ -10,114 +10,114 @@ $(function(){
 
 
 function weeklyMainSlide(){
-//메인 슬라이드
-mainSlide = new Swiper('#main_slide_container_id',{
-  speed: 500,
-  loop: true,
-  autoHeight: false,
-  slidesPerView: 3,
-  centeredSlides: true,
-  navigation: {
-  nextEl: '.btn_next',
-  prevEl: '.btn_prev',
-},
-  breakpoints: {
-  // when window width is <= 739px
-  739: {
-      loop: false,
-      scrollbarHide: true,
-      slidesPerView: 1,
-      centeredSlides: false,
-      spaceBetween: 16
-  }
-  }
-});
+    //메인 슬라이드
+    mainSlide = new Swiper('#main_slide_container_id',{
+        speed: 500,
+        loop: true,
+        autoHeight: false,
+        slidesPerView: 3,
+        centeredSlides: true,
+        navigation: {
+            nextEl: '.btn_next',
+            prevEl: '.btn_prev',
+        },
+        breakpoints: {
+        // when window width is <= 739px
+            739: {
+                loop: false,
+                scrollbarHide: true,
+                slidesPerView: 1,
+                centeredSlides: false,
+                spaceBetween: 16
+            }
+        }
+    });
 }
 
 function slideCurrentBg(){
-// 메인 슬라이드 current background
-  $(".slide_current_bg").css("background-image", "url(" + $('.main_slide .swiper-slide-active img').attr('src') + ")");
-  $("#main_slide_control div").click(function(){
-  var imageUrl = $('.main_slide .swiper-slide-active img').attr('src');
-  $(".slide_current_bg").css("background-image", "url(" + imageUrl + ")");
-  });
+    // 메인 슬라이드 current background
+    $('.slide_current_bg').css('background-image', 'url(' + $('.main_slide .swiper-slide-active img').attr('src') + ')');
+    $('#main_slide_control div').click(function(){
+        var imageUrl = $('.main_slide .swiper-slide-active img').attr('src');
+        $('.slide_current_bg').css('background-image', 'url(' + imageUrl + ')');
+    });
 }
 
 //날짜별 지면보기 슬라이드
 function weeklyPaperSlide(){
-  paperSlide = new Swiper('.paper_slide',{
-  //speed: 200,
-  loop: true,
-  autoHeight: false,
-  slidesPerView: 3,
-  centeredSlides: true,
-  navigation: {
-  nextEl: '.btn_next',
-  prevEl: '.btn_prev',
-  },
-});
+    paperSlide = new Swiper('.paper_slide',{
+    //speed: 200,
+        loop: true,
+        autoHeight: false,
+        slidesPerView: 3,
+        centeredSlides: true,
+        navigation: {
+            nextEl: '.btn_next',
+            prevEl: '.btn_prev',
+        }
+    });
 }
 
 function weeklyTalkMobile(){
-//메인 모바일 슬라이드  - weeklytalk
-var weeklyTalkSli = true;
-  function initSwiper() {
-      var windowWidth = $(window).outerWidth();
-      if ( (windowWidth < 739) && (weeklyTalkSli == true)) {
-      //console.log('mobile')
-          weeklyTalkSli = new Swiper('#weekly_talk_id', {
-          freeMode: true,
-          scrollbarHide: true,
-          slidesPerView: 'auto',
-          grabCursor: true,
-          autoHeight: false,
-          spaceBetween: 20,
-      });
-      } else if ((windowWidth > 740) && (weeklyTalkSli != true)) {
-      //console.log('pc')
-      weeklyTalkSli.destroy();
-      weeklyTalkSli = true;
-      $('.swiper-wrapper').removeAttr('style');
-      $('.swiper-slide').removeAttr('style');
-      }  else{
-          //none
-      }
-  }
-  initSwiper();
+    //메인 모바일 슬라이드  - weeklytalk
+    var weeklyTalkSli = true;
+    function initSwiper() {
+        var windowWidth = $(window).outerWidth();
+        if ((windowWidth < 739) && (weeklyTalkSli == true)) {
+            //console.log('mobile')
+            weeklyTalkSli = new Swiper('#weekly_talk_id', {
+                freeMode: true,
+                scrollbarHide: true,
+                slidesPerView: 'auto',
+                grabCursor: true,
+                autoHeight: false,
+                spaceBetween: 20,
+            });
+        }else if ((windowWidth > 740) && (weeklyTalkSli != true)) {
+            //console.log('pc')
+            weeklyTalkSli.destroy();
+            weeklyTalkSli = true;
+            $('.swiper-wrapper').removeAttr('style');
+            $('.swiper-slide').removeAttr('style');
+        }else {
+            //none
+        }
+    }
+    initSwiper();
 
-  $(window).resize(function() {
-      initSwiper();
-  });
+    $(window).resize(function() {
+        initSwiper();
+    });
 }
 
 function weeklyCollaboMobile(){
-//메인 모바일 슬라이드  - collabo
- var collaboSli = true;
-     function initSwiper() {
-         var windowWidth = $(window).outerWidth();
-         if ( (windowWidth < 739) && (collaboSli == true)) {
-             collaboSli = new Swiper('#collabo_id', {
-              freeMode: true,
-              scrollbarHide: true,
-              slidesPerView: 'auto',
-              grabCursor: true,
-              autoHeight: false,
-              spaceBetween: 10,
-         });
-         } else if ((windowWidth > 740) && (collaboSli != true)) {
-         collaboSli.destroy();
-         collaboSli = true;
-         $('.swiper-wrapper').removeAttr('style');
-         $('.swiper-slide').removeAttr('style');
-         } else{
-             //none
-         }
-     }
-     initSwiper();
+    //메인 모바일 슬라이드  - collabo
+    var collaboSli = true;
+    function initSwiper() {
+        var windowWidth = $(window).outerWidth();
+        if ( (windowWidth < 739) && (collaboSli == true)) {
+            collaboSli = new Swiper('#collabo_id', {
+                freeMode: true,
+                scrollbarHide: true,
+                slidesPerView: 'auto',
+                grabCursor: true,
+                autoHeight: false,
+                spaceBetween: 10,
+            });
+        }else if ((windowWidth > 740) && (collaboSli != true)) {
+            collaboSli.destroy();
+            collaboSli = true;
+            $('.swiper-wrapper').removeAttr('style');
+            $('.swiper-slide').removeAttr('style');
+        }else {
+            //none
+        }
+    }
+    initSwiper();
 
-   $(window).resize(function() {
-       initSwiper();
-   });
+    $(window).resize(function() {
+        initSwiper();
+    });
 }  
 
 //refresh page on browser resize
@@ -169,4 +169,3 @@ function weeklyLoginPop(){
 
  $('.main_wrap').append(loginPop); 
 } */
-

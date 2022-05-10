@@ -5,18 +5,18 @@ document.write(
         '<div class="header_top clear_fix">'+
             '<div class="inner">'+
                 /* '<div class="sound_ban"><a href="http://weeklybiz.chosun.com/svc/wb_voice.html" target="_blank" onclick="ga(\'send\', \'event\', \'GNB\', \'Link\', \'VoiceNews\');">위클리비즈 보이스 뉴스</a></div>'+ */
-                '<div class="sound_ban new"><a href="javascript:void(0)" onclick="window.open(\'//bim.chosun.com\', \'_blank\', \'scrollbars=yes,top=0,left=0,width=375,height=667\'); ga(\'send\', \'event\', \'GNB\', \'Link\', \'GNB_Promotion\');">위빔</a></div>'+
-                '<h1><a href="https://weeklybiz.chosun.com/" onclick="ga(\'send\', \'event\', \'GNB\', \'Link\', \'WBlogo\');"><img src="//image.chosun.com/weeklybiz/imges2019//logo_2x.png" alt="위클리비즈"></a></h1>'+ 
+                '<div class="sound_ban new"><a href="javascript:void(0)">위빔</a></div>'+
+                '<h1><a href="https://weeklybiz.chosun.com/"><img src="//image.chosun.com/weeklybiz/imges2019//logo_2x.png" alt="위클리비즈"></a></h1>'+ 
                 '<ul class="link">'+
-                    '<li><a href="https://members.chosun.com/subscription/appendweeklybiz.jsp" target="_blank" onclick="ga(\'send\', \'event\', \'GNB\', \'Link\', \'WBsubscribe\');">WEEKLY BIZ 구독하기</a></li>'+
-                    '<li><a href="https://membership.chosun.com/login/index_n.jsp?returl=" id="logLink" onclick="ga(\'send\', \'event\', \'GNB\', \'Link\', \'Loginout\');">로그인</a></li>'+
+                    '<li><a href="https://members.chosun.com/subscription/appendweeklybiz.jsp" target="_blank">WEEKLY BIZ 구독하기</a></li>'+
+                    '<li><a href="https://membership.chosun.com/login/index_n.jsp?returl=" id="logLink">로그인</a></li>'+
                 '</ul>'+
                 '<ul class="link m">'+
-                    '<li><a href="https://members.chosun.com/subscription/appendweeklybiz.jsp" target="_blank" onclick="ga(\'send\', \'event\', \'GNB\', \'Link\', \'WBsubscribe\');">구독하기</a></li>'+
-                    '<li><a href="https://membership.chosun.com/join/regist/mobileN/login_m.jsp?returl=" id="tabLogLink" onclick="ga(\'send\', \'event\', \'GNB\', \'Link\', \'Loginout\');">로그인</a></li>'+
+                    '<li><a href="https://members.chosun.com/subscription/appendweeklybiz.jsp" target="_blank">구독하기</a></li>'+
+                    '<li><a href="https://membership.chosun.com/join/regist/mobileN/login_m.jsp?returl=" id="tabLogLink">로그인</a></li>'+
                 '</ul>'+
                 '<div class="csh_search">'+
-                    '<a href="javascript:void(0)" onclick="ga(\'send\', \'event\', \'GNB\', \'Menu\', \'Search\');"" id="csh_search_id" title="Search" class="search_open" rel="nofollow">검색</a>'+
+                    '<a href="javascript:void(0)" id="csh_search_id" title="Search" class="search_open" rel="nofollow">검색</a>'+
                         //<!--검색 버튼-->
                         //<!--classname - search_open (닫혀있을때)-->
                         //<!--classname - search_close (검색창 열려있을때)-->
@@ -27,54 +27,54 @@ document.write(
         '<div class="header_bottom">'+
             '<div class="inner">'+
                 '<ul class="menu clear_fix">'+
-                    '<li id="tp_home"><a href="#" onclick="ga(\'send\', \'event\', \'GNB\', \'Menu\', \'Home\');">Home</a></li>'+
-                    '<li id="tp_articles"><a href="#" onclick="ga(\'send\', \'event\', \'GNB\', \'Menu\', \'AllArticles\');">All Articles</a></li>'+
-                    '<li id="tp_interview"><a href="#" onclick="ga(\'send\', \'event\', \'GNB\', \'Menu\', \'Spotlight\');">Interview</a></li>'+
-                    '<li id="tp_analysis"><a href="#" onclick="ga(\'send\', \'event\', \'GNB\', \'Menu\', \'Analysis\');">Analysis</a></li>'+
-                    '<li id="tp_opinion"><a href="#" onclick="ga(\'send\', \'event\', \'GNB\', \'Menu\', \'Opinion\');">Opinion</a></li>'+
-                    '<li id="tp_culture"><a href="#" onclick="ga(\'send\', \'event\', \'GNB\', \'Menu\', \'Culture\');">Culture</a></li>'+
-                    '<li id="tp_trend"><a href="#" onclick="ga(\'send\', \'event\', \'GNB\', \'Menu\', \'Trend\');">Trend</a></li>'+
+                    '<li id="tp_home"><a href="#">Home</a></li>'+
+                    '<li id="tp_articles"><a href="#">All Articles</a></li>'+
+                    '<li id="tp_interview"><a href="#">Interview</a></li>'+
+                    '<li id="tp_analysis"><a href="#">Analysis</a></li>'+
+                    '<li id="tp_opinion"><a href="#">Opinion</a></li>'+
+                    '<li id="tp_culture"><a href="#">Culture</a></li>'+
+                    '<li id="tp_trend"><a href="#">Trend</a></li>'+
                 '</ul>'+
                 '<ul class="tag clear_fix">'+
-                    '<li><a href="#" onclick="ga(\'send\', \'event\', \'GNB\', \'Menu\', \'Hash1\');">#Webly</a></li>'+
-                    '<li><a href="#" onclick="ga(\'send\', \'event\', \'GNB\', \'Menu\', \'Hash2\');">#Cover Story</a></li>'+
-                    '<li><a href="#" onclick="ga(\'send\', \'event\', \'GNB\', \'Menu\', \'Hash3\');">#Interview in Depth</a></li>'+
+                    '<li><a href="#">#Webly</a></li>'+
+                    '<li><a href="#">#Cover Story</a></li>'+
+                    '<li><a href="#">#Interview in Depth</a></li>'+
                 '</ul>'+
                 '<ul class="m_text_btn clear_fix">'+
-                    '<li><a href="#" onclick="ga(\'send\', \'event\', \'GNB\', \'Menu\', \'MLayer_Service\');">알립니다</a></li>'+
-                    '<li><a href="//cdb.chosun.com/search/pdf/i_wb/weeklybiz.jsp" onclick="ga(\'send\', \'event\', \'GNB\', \'Menu\', \'MLayer_Service\');">지면보기</a></li>'+
-                    '<li><a href="https://members.chosun.com/subscription/appendweeklybiz.jsp" onclick="ga(\'send\', \'event\', \'GNB\', \'Menu\', \'MLayer_Service\');">구독하기</a></li>'+
+                    '<li><a href="#">알립니다</a></li>'+
+                    '<li><a href="//cdb.chosun.com/search/pdf/i_wb/weeklybiz.jsp">지면보기</a></li>'+
+                    '<li><a href="https://members.chosun.com/subscription/appendweeklybiz.jsp">구독하기</a></li>'+
                 '</ul>'+
                 '<div class="mobile_login_box">'+
                     '<ul class="profile_info">'+
-                        '<li class="profile_img"><a href="#"><img src="//news.chosun.com/test_2010/nara_css/weekly_test/images/KakaoTalk_20190603_101204577.jpg" alt="프로플 이미지"></a></li>'+
+                        '<li class="profile_img"><a href="#"><img src="//news.chosun.com/test_2010/nara_css/weekly_test/images/KakaoTalk_20190603_101204577.jpg" alt="프로필 이미지"></a></li>'+
                         '<li class="profile_name"><a href="#">김조선</a></li>'+
                     '</ul>'+
                     '<ul class="login_text_btn">'+
                         '<li><a href="https://membership.chosun.com/joinN/registUser.jsp?site=chosun" id="memberLink">회원가입</a></li>'+
-                        '<li><a href="https://membership.chosun.com/join/regist/mobileN/login_m.jsp?returl=" id="mLogLink" onclick="ga(\'send\', \'event\', \'GNB\', \'Link\', \'Loginout\');">로그인</a></li>'+
+                        '<li><a href="https://membership.chosun.com/join/regist/mobileN/login_m.jsp?returl=" id="mLogLink">로그인</a></li>'+
                     '</ul>'+
                 '</div>'+
                 '<div class="m_chosun_logo"><a href="//www.chosun.com?utm_source=csmedia&utm_medium=wbmenu&utm_campaign=www"><img src="//image.chosun.com/weeklybiz/imges2019//m_chosun_2x.png" alt="chosun.com"></a></div>'+
                 '<div class="sound_ban_mobile new">'+
-                    '<a a href="javascript:viod(0)" onclick="window.open(\'//bim.chosun.com\', \'_blank\', \'scrollbars=yes,top=0,left=0,width=375,height=667\'); ga(\'send\', \'event\', \'GNB\', \'Link\', \'GNB_Promotion\');">위빔</a>'+
+                    '<a a href="javascript:viod(0)">위빔</a>'+
                 '</div>'+
             '</div>'+
         '</div>'+
 
-        '<div class="weekly_mmenu"><a href="javascript:void(0)" class="m_menu_open" id="weekly_mmenu_btn_id" onclick="ga(\'send\', \'event\', \'GNB\', \'Menu\', \'MenuLayer\');">위클리비즈 메뉴</a></div>'+
+        '<div class="weekly_mmenu"><a href="javascript:void(0)" class="m_menu_open" id="weekly_mmenu_btn_id">위클리비즈 메뉴</a></div>'+
 
         '<div class="searh_area_bg" id="searh_area_bg_id"></div>'+
         //<!-- 검색 backgroud bg -->
         '<div class="csh_search_area" id="csh_search_area_id">'+
             '<h4 class="hide">Search</h4>'+
             '<div class="csh_search_inputbox">'+
-                '<form method="get" id="id_searchForm" name="id_searchForm" action="//weeklybiz.chosun.com/svc/wb_search.html?query=" target="_self" accept-charset="utf-8" onsubmit="goSearch();return false">'+
+                '<form method="get" id="id_searchForm" name="id_searchForm" action="//weeklybiz.chosun.com/svc/wb_search.html?query=" target="_self" accept-charset="utf-8" onsubmit="goSearch(); return false">'+
                     '<fieldset>'+
                         '<legend>통합검색</legend>'+
                         '<span class="InputOutline">'+
                             '<input type="text" value="" class="searchTerm" id="query" name="query" title="검색어 입력" placeholder="검색어를 입력하세요." autocomplete="off">'+
-                            '<input type="submit" alt="Search" title="Search" class="searchBtn" value="Search" onclick="ga(\'send\', \'event\', \'GNB\', \'Menu\', \'Search\');">'+
+                            '<input type="submit" alt="Search" title="Search" class="searchBtn" value="Search">'+
                             '<a href="javascript:clearQuery();" class="input_close" id="search_close_id">닫기</a>'+
                         '</span>'+
                         '<input type="hidden" name="pageconf" id="pageconf" value="total">'+
@@ -214,7 +214,7 @@ function wrapWindowByMask() {
     //setOpenbg.css({ 'width': maskWidth, 'height': maskHeight });
     //setOpenbg.fadeIn(0);
     //setOpenbg.fadeTo('slow', 0.6);
-} 
+};
 
 //검색관련
 function goSearch() {
@@ -229,5 +229,4 @@ function goSearch() {
     f.submit();
     //document.charset = 'utf-8';
     //document.charset = 'euc-kr';
-}
-
+};

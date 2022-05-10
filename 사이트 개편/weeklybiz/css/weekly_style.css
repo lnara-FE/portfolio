@@ -4,7 +4,7 @@
 @import url("//fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+KR&display=swap");
  
 /* float 해제 - 가상클래스 */
-.clear_fix::after {content:""; clear: both; display: block;}
+.clear_fix::after {content: ""; clear: both; display: block;}
 
 /* global */
 a, a:visited, a:hover {color: inherit; font-size: inherit; text-decoration: none;}
@@ -14,7 +14,7 @@ ul.menu li, ul.tag li, dd.cate, dd.tag, dd.name, dt.quote {font-family: 'Noto Se
 h2 {line-height: 1.4; font-family: 'Noto Serif KR', serif, 맑은고딕, 'Malgun Gothic', AppleSDGothicNeo-Regular, 나눔고딕;}
 dt {color: #000; font-weight: bold; word-break: keep-all;}
 dt a:hover {text-decoration: underline;}
-dd.cate{line-height: 1.4; letter-spacing: normal; color: #777;}
+dd.cate {line-height: 1.4; letter-spacing: normal; color: #24a4e6;}
 dd.tag {line-height: 1.43; letter-spacing: normal; color: #777;} 
 dd.tag:before {content: "#"; /* margin-right: 1.5px; */}
 dd.desc {color: #707070;}
@@ -177,7 +177,7 @@ section.head_art {padding-top: 32px; padding-bottom: 32px;}
 .letter_req_pop .req_pop>form input {width: 15px; height: 15px;}
 .letter_req_pop .req_pop>a {display: inline-block; padding: 5px; color: #24a6e6; background: #fff; border: 2px solid #24a6e6; border-radius: 5px;}
 .letter_req_pop .req_pop .letter_req_btn {color: #fff; background: #24a6e6;}
-.letter_req_pop a.req_letter_close {position: absolute; right: 36.5%; bottom : 67%; display: inline-block; width: 24px; height: 24px; font-size: 0; background: url('//image.chosun.com/weeklybiz/imges2019/weekly_icon.png') no-repeat; background-position: -50px 0; z-index: 9999;}
+.letter_req_pop a.req_letter_close {position: absolute; right: 36.5%; bottom : 67%; display: inline-block; width: 24px; height: 24px; font-size: 0; background: url("//image.chosun.com/weeklybiz/imges2019/weekly_icon.png") no-repeat; background-position: -50px 0; z-index: 9999;}
 */
 
 
@@ -298,7 +298,7 @@ section.sec_list {margin-bottom: 35px; padding-top: 41px;}
 .login_pop strong {margin-right: 12px; font-size: 20px; line-height: 95px; font-weight: bold;} 
 .login_pop a {display: inline-block;}
 .login_pop a.login_btn {padding: 8px 39px; font-size: 20px; line-height: 30px; font-weight: bold; color: #1088f9; border-radius: 2px;  background: #fff;} 
-.login_pop a.pop_close_btn {position: absolute; right: 0; bottom: 28px; width: 38px; height: 38px; font-size: 0; line-height: 0; background: url('//image.chosun.com/weeklybiz/imges2019/weekly_icon.png') no-repeat; background-position: -200px -400px; overflow: hidden;}  
+.login_pop a.pop_close_btn {position: absolute; right: 0; bottom: 28px; width: 38px; height: 38px; font-size: 0; line-height: 0; background: url("//image.chosun.com/weeklybiz/imges2019/weekly_icon.png) no-repeat; background-position: -200px -400px; overflow: hidden;}  
 */
 
 
@@ -534,7 +534,7 @@ footer .weekly_footer_m {display: none;}
   .header_bottom ul.m_text_btn li+li {margin-top: 14.5px;}
   .header_bottom .chosun_login_p {padding: 15px 0 12px;}
   .header_bottom .chosun_login_p .profile {padding-bottom: 6px;}
-  .header_bottom ul.profile_info {padding-bottom: 0;}
+  /*.header_bottom ul.profile_info {padding-bottom: 0;}*/
   .header_bottom ul.profile_info li.profile_img img {width: 25px; height: 25px;}
   .header_bottom ul.profile_info li.profile_name {margin: 0 6px; font-size: 15px; line-height: 1.47;}
   .header_bottom .mobile_login_box {padding: 15px 0;}
@@ -543,7 +543,7 @@ footer .weekly_footer_m {display: none;}
   .header_bottom .m_chosun_logo {padding: 15px 0; border-bottom: 1px solid #eaeaea;}
   .header_bottom .m_chosun_logo img {height: 12px;}
   .header_bottom .sound_ban_mobile {display: inline-block; padding-top: 15px;}
-  .header_bottom .sound_ban_mobile a {width: 191px; height: 43px; display: block; background: url('//image.chosun.com/weeklybiz/imges2019/weekly_icon.png') no-repeat; background-size: 250px; background-position: -50px -25px; font-size: 0; line-height: 0;}
+  .header_bottom .sound_ban_mobile a {width: 191px; height: 43px; display: block; background: url("//image.chosun.com/weeklybiz/imges2019/weekly_icon.png") no-repeat; background-size: 250px; background-position: -50px -25px; font-size: 0; line-height: 0;}
   .weekly_mmenu {top: 9px; left: 15px;}
   .csh_search {top: -5px; right: 15px;}
   .csh_search_area {top: 44px; height: 74px;}
