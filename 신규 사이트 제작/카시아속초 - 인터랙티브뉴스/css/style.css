@@ -1,0 +1,197 @@
+@charset "utf-8";
+
+@import url('//news.chosun.com/dhtm/css/css_reset_2018.css');
+@import url('//biz.chosun.com/dhtm/css/biz_font_set_min.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+/*common*/
+body, input, button, textarea {color: #222; font: 18px '조선고딕', '맑은 고딕', 'Malgun Gothic', 나눔고딕, 돋움, Dotum, 굴림, Gulim, 'Apple SD Gothic Neo', sans-serif; letter-spacing: normal;}
+a, a:hover,a:visited {text-decoration: none; color: inherit;}
+body::-webkit-scrollbar {display: none;}
+body {-ms-overflow-style: none;}
+
+#wrap {position: relative; width: 100%; height: auto; overflow: hidden;}
+header {position: absolute; top: 0; left: 0; width: 100%; text-align: left; z-index: 99;}
+header #nav2020-head.transparent .nav2020-title a {color: #fff;}
+
+/*repeating elements style*/
+h4 {font-size: 28px; text-align: center;}
+.par {max-width: 720px; margin: 0 auto; line-height: 1.82; text-align: left;}
+.par+.par {padding-top: 30px;}
+.art-number {display: inline-block; margin: 100px auto 60px;}
+.note {display: block; position: absolute; bottom: 15px; right: 0; padding: 0 20px; font-size: 13px; color: #D7D7D7; text-align: right; box-sizing: border-box; z-index: 99;}
+
+.container .title {position: relative; width: 100%; height: 840px; overflow: hidden;}
+.title-box {position: absolute; left: 18.64%; top: 50%; transform: translateY(-50%); max-width: 1200px; z-index: 99;}
+.title-box h2 {width: 461px; height: 276px; overflow: hidden;}
+.title-box h2 img {display: block; width: 100%; font-size: 0; line-height: 0; overflow: hidden;}
+.title-box .author_info {margin: 24px 0 0 12px; overflow: hidden;}
+.title-box .author_info span {display: block; float: left; margin-right: 12px; color: #fff; line-height: 1.11;}
+.title-box .author_info span+span {padding-left: 11px; border-left: 1px solid #fff;}
+.title-bg {position: relative; height: 100%;}
+.title-bg::before {content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 840px; background: rgba(6, 17, 30, 0.4); z-index: 9;}
+.title-bg .swiper-container {height: 100%;}
+.title-bg .swiper-slide img {display: block; position: absolute; top: 50%; transform: translateY(-50%); width: 100%; min-height: 850px; font-size: 0; line-height: 0; overflow: hidden;}
+
+.container .content {margin: 0 auto; text-align: center;} 
+.intro {position: relative; padding: 30px 0 60px; background-image: linear-gradient(348deg, #3d7bbe, #61bee5); box-sizing: border-box;}
+.intro .intro-logo {display: inline-block; width: 56px; height: 100px; margin-bottom: 20px; overflow: hidden;}
+.intro .intro-logo>img {display: block; width: 100%; height: 100%; font-size: 0; line-height: 0;}
+.intro .par {font-family: '조선중간고딕'; color: #fff;}
+
+.img-basic {position: relative; max-width: 720px; margin: 80px auto;}
+.img-basic img {position: relative; display: block; max-width: 720px; width: 100%; margin: 0 auto; font-size: 0; line-height: 0; overflow: hidden; z-index: 2;}
+.img-basic.map-2 {max-width: 1200px;}
+.img-basic.map-2::before {content: ''; display: inline-block; position: absolute; top: -40px; left: 0; width: 320px; height: 321px; background: url('../images/ic-banyan.svg')no-repeat; background-size: cover; animation: circle 30s infinite linear;} 
+@keyframes circle { 
+	100%{transform: rotate(360deg);}
+}
+
+.img-slide {position: relative; max-width: 720px; margin: 80px auto;}
+.img-slide img {display: block; width: 100%; font-size: 0; line-height: 0;}
+.img-slide .slide_fun {position: absolute; top: 20px; left: 20px; z-index: 2;}
+.img-slide .swiper-pagination-bullet {display: block; width: 10px; height: 10px; margin: 0 5px 10px; background: transparent; border: 1px solid #fff; border-radius: 10px; box-shadow: 0 3px 8px 0 rgba(34, 34, 34, 0.2); opacity: 1;}
+.img-slide .swiper-pagination-bullet-active {border: 1px solid #000; background: #fff;}
+
+/*parallax background type*/
+.img-fixed {position: relative; margin: 80px auto;}
+.img-fixed-bg {position: relative; width: 100%; height: 600px;}
+.img-fixed img {display: none;}
+.img-fixed .img-fixed-bg {background: url('//image.chosun.com/interactive/cassia_sokcho/img-fixed.png')no-repeat; background-size: cover; background-attachment: fixed;}
+
+/*img-accordion type*/
+.img-accordion {max-width: 1200px; margin: 80px auto; text-align: center;}
+.img-accordion h4 {font-family: '조선중간고딕';}
+.img-accordion .info {display: inline-block; margin: 15px auto 30px; color: #666; font-size: 15px;}
+.img-accordion .img-accordion-wrap {width: 100%; height: 432px; display: flex; flex-direction: row; align-items: stretch;}
+.img-acc-item {position: relative; width: 10%; margin: 0 4px; border-radius: 3px; transition: width .8s ease; cursor: pointer; overflow: hidden; z-index: 2;}
+.img-acc-item::before {content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(34, 34, 34, 0.6); z-index: 1;}
+.img-acc-item .note {visibility: hidden; opacity: 0; white-space: nowrap; transition: opacity ease .5s; transition-delay: .3s;}
+.img-acc-item>img {position: absolute; top: 0; left: 50%; transform: translateX(-50%); display: block; height: 100%;} 
+.img-acc-item .img-acc-item-cont {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; transition: transform .5s ease; overflow: hidden; z-index: 3;}
+.img-acc-item .img-acc-item-cont i {display: inline-block; width: 38px; height: 38px;}
+.img-acc-item .img-acc-item-cont i>img {display: block; width: 100%; height: 100%; font-size: 0; line-height: 0;}
+.img-acc-item .img-acc-item-cont .txt {display: block; font-size: 20px; color: #fff;}
+.img-acc-item.active {width: 63%;}
+.img-acc-item.active::before {display: none;}
+.img-acc-item.active .note {opacity: 1; visibility: visible;}
+.img-acc-item.active .img-acc-item-cont {top: 15px; left: 15px; width: auto; transform: none; text-shadow: 2px 2px 2px rgba(34, 34, 34, 0.5); }
+.img-acc-item.active .img-acc-item-cont i {float: left;}
+.img-acc-item.active .img-acc-item-cont .txt {float: left; line-height: 38px;}
+.img-acc-item.active>img {min-width: 100%; height: 100%;}
+
+.img-popup {position: relative; margin: 80px auto; background: url('//image.chosun.com/interactive/cassia_sokcho/pop-bg.png')no-repeat; background-size: cover;}
+.img-popup-wrap {padding: 60px 0;}
+.img-popup-wrap ul {max-width: 1200px; margin: 0 auto; overflow: hidden;}
+.img-popup-wrap ul li {float: left; width: 292px; height: 292px;}
+.img-popup-wrap ul li+li {margin-left: 10px}
+.img-popup-wrap ul li a {position: relative; display: block; width: 100%; height: 100%;}
+.img-popup-wrap ul li a::before {content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: block; width: 60px; height: 60px; background: url('../images/ic-zoom.svg')no-repeat; background-size: cover;}
+.img-popup-wrap ul li a img {display: block; width: 100%; height: 100%; font-size: 0; line-height: 0;}
+.img-popup-cont {display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); max-width: 1160px; padding: 70px; background: #fff; box-sizing: border-box; z-index: 99; overflow: hidden;}
+.img-popup-cont.active {display: block;}
+.img-popup-cont .img-popup-item {display: none; flex-direction: column; justify-content: flex-start; width: 100%; height: 100%; overflow: hidden;}
+.img-popup-cont .img-popup-item .img-box {position: relative;}
+.img-popup-cont .img-popup-item .img-box img {display: block; max-width: 720px; height: auto; font-size: 0; line-height: 0;}
+.img-popup-cont .img-popup-item p {margin-top: 20px; font-family: '조선중간고딕';}
+.img-popup-cont .img-popup-item.active {display: flex;}
+.close_btn {display: inline-block; position: absolute; top: 20px; right: 20px; width: 28px; height: 28px;}
+.pop-bg {position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(34, 34, 34, 0.6); z-index: 8; display: none;}
+.pop-bg.active {display: block;}
+
+.contact-info {position: relative; margin-top: 100px; padding: 60px 0; background-image: linear-gradient(to bottom, #f0f5fa, #f0f5fa); word-break: keep-all; box-sizing: border-box;}
+.contact-info h4 {color: #95a9c3; font-family: 'Noto Sans KR', sans-serif; font-weight: bold;}
+.contact-info p {margin: 20px auto; max-width: 700px; line-height: 2; text-align: center;}
+.contact-info a {color: #2b7cde; text-decoration: underline;}
+.contact-info .info {color: #7f8c9c; font-size: 15px;}
+
+a.btn-top {position: fixed; bottom: 15%; right: 10%; display: inline-block; width: 60px; height: 60px; font-size: 0; transition: opacity .5s ease-in;  opacity: 0; z-index: 2;}
+a.btn-top>img {display: block; width: 100%; height: 100%; font-size: 0; line-height: 0;}
+a.btn-site {position: fixed; bottom: 15%; left: 0; display: inline-block; width: 80px; height: 60px; border-top-right-radius: 100px; border-bottom-right-radius: 100px; background: linear-gradient(176deg, #0089c6 -37%, #005194 227%); font-family: '조선중간고딕'; color: transparent; transition: all .3s ease-in-out; box-sizing: border-box; animation: bounce 1s infinite alternate; z-index: 2; opacity: 0;}
+a.btn-site::before {content: ''; position: absolute; top: 50%; right: 10px; transform: translateY(-50%); display: inline-block; width: 44px; height: 50px; background: url('../images/btn-logo.png')no-repeat; background-size: cover;}
+a.btn-site:hover {width: 293px; line-height: 60px; padding-left: 33px; color: #fff;}
+
+@keyframes bounce {
+    0 {margin-bottom:0}
+    50% {margin-bottom:6px}
+    100% {margin-bottom:0}
+} 
+
+ul.share {max-width: 190px; margin: 30px auto 0; text-align: center; overflow: hidden;}
+ul.share li {float: left; text-align: center;}
+ul.share li+li {margin-left: 20px;}
+ul.share li a {display: inline-block; width: 50px; height: 50px; font-size: 0; vertical-align: top;}
+ul.share li a.btn_kat {background: url('../images/sns-kakao.png')no-repeat; background-size: cover;}
+ul.share li a.btn_fb {background: url('../images/sns-facebook.png')no-repeat; background-size: cover;}
+ul.share li a.btn_nblog {background: url('../images/sns-nblog.png')no-repeat; background-size: cover;}
+
+@media all and (max-width: 1200px){
+    .img-popup {margin: 40px auto; background-position: center;}
+    .img-popup-wrap ul {max-width: 340px;}
+    .img-popup-wrap ul li {float: none; display: inline-block; width: 155px; height: 155px;}
+    .img-popup-wrap ul li+li {margin-left: 10px;}
+    .img-popup-wrap ul li:nth-child(3) {margin-left: 0; margin-top: 22px;}
+    .img-popup-wrap ul li:nth-child(4) {margin-top: 22px;}
+    .img-popup-cont {min-width: calc(100% - 40px); padding: 60px 20px 20px;}
+    .img-popup-cont .img-popup-item .img-box img {max-width: 100%;}
+    .img-popup-cont .img-popup-item .img-box .note {bottom: 8px; padding: 0 8px;}
+    .img-popup-cont .img-popup-item p {flex-basis: auto; padding-left: 0; text-align: center;}
+}
+
+@media all and (max-width: 959px){
+    body, input, button, textarea {font-size: 17px;}
+
+    h4 {font-size: 20px;}
+    .par {max-width: 100%; margin: 0 20px; box-sizing: border-box;}
+    .art-number {margin: 50px auto 40px;}
+    .note {left: 0; right: auto; bottom: 20px; text-align: left;}
+
+    .container .title {height: 550px;}
+    .title-box {left: 20px;}
+    .title-box h2 {width: 231px; height: 146px;}
+    .title-box .author_info {margin: 10px 0 0 4px; font-size: 15px;}
+    .title-box .author_info span {font-size: 15px; margin-right: 8px;}
+    .title-box .author_info span+span {padding-left: 7px;}
+    .title-bg .swiper-slide img {width: auto; max-height: 550px;}
+    .title-bg .swiper-slide.fir img, .title-bg .swiper-slide.sec img {visibility: hidden;}
+    .title-bg .swiper-slide.fir {background: url('//image.chosun.com/interactive/cassia_sokcho/title-bg-2.png')no-repeat; background-size: cover; background-position: 50% 25%;}
+    .title-bg .swiper-slide.sec {background: url('//image.chosun.com/interactive/cassia_sokcho/title-bg-3.png')no-repeat; background-size: cover; background-position: 50% 25%;}
+
+
+    .container .content {max-width: 100%;}
+    .intro {padding: 20px 20px 40px;}
+    .intro .intro-logo {width: 45px; height: 80px;}
+    .intro .par {margin: 0;}
+
+    .img-basic {margin: 40px 20px;}
+    .img-basic.map-2::before {display: none;}
+
+    .img-slide {margin: 40px auto;}
+    
+    .img-fixed {margin: 40px auto;}
+    .img-fixed .img-fixed-bg {height: 480px; background-attachment: unset; background-position: center;}
+
+    .img-accordion {margin: 40px auto; padding: 0 20px; box-sizing: border-box;}
+    .img-accordion .info {margin: 8px auto 20px; font-size: 13px;}
+    .img-accordion .img-accordion-wrap {flex-direction: column; height: 440px;}
+    .img-acc-item {width: 100%; height: 50px; margin: 5px auto; transition: height .5s ease;}
+    .img-acc-item img {width: 100%; height: auto;}
+    .img-acc-item .img-acc-item-cont {width: auto; transition: transform .3s ease;}
+    .img-acc-item .img-acc-item-cont i {float: left;}
+    .img-acc-item .img-acc-item-cont .txt {float: left; font-size: 17px; line-height: 38px;}
+    .img-acc-item.active {width: 100%; height: 180px;} 
+    .img-acc-item.active .img-acc-item-cont {left: 8px; top: 8px;}
+    .img-acc-item.active .note {bottom: 8px; padding: 0 8px; white-space: normal;}
+
+    .contact-info {margin-top: 50px; padding: 40px 20px;}
+    .contact-info h4 {font-size: 24px;}
+    .contact-info p {line-height: 1.53;}
+
+    a.btn-top {right: 20px; bottom: 60px; width: 45px; height: 45px;}
+    a.btn-site, a.btn-site:hover {left: 0; bottom: 60px; width: 117px; height: 50px; padding-left: 12px; color: #fff; line-height: 50px; font-size: 14px; opacity: 0;}
+    a.btn-site::before {right: 16px; width: 28px; height: 34px;}
+
+    ul.share {max-width: 160px; margin: 30px auto 0;}
+    ul.share li+li {margin-left: 20px;}
+    ul.share li a {width: 40px; height: 40px;}
+}
