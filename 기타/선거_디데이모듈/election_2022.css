@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+.election-2022 {
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  left: 50%;
+  right: 50%;
+  position: relative;
+  background: url("//image.chosun.com/arc/election2022_2_pc_bg.png") no-repeat;   background-position: center 0;
+  background-size: cover;
+}
+.election-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  height: 120px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+.election-wrap img {
+  display: block;
+  width: 100%;
+}
+.election-title {
+  display: flex;
+  align-items: center;
+}
+.election-title .election-logo {
+  display: inline-block;
+  width: 75px;
+  height: 47px;
+  margin: 0 12px 0 0;
+  padding: 0;
+  background: url("//image.chosun.com/arc/election2022_2_logo.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.election-title strong {
+  color: #fff;
+  font-family: "ChosunMGothicBold", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+.election-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.election-counter .dday {
+  margin: 0 0 2px 0;
+  padding: 0;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.43;
+  font-family: "ChosunGothic";
+  word-break: normal;
+  opacity: 0.6;
+}
+.election-counter .election-day {
+  display: flex;
+  align-items: center;
+}
+.election-day .election-icon {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: 0 6px 0 0;
+  padding: 0;
+  background: url("//image.chosun.com/arc/election2022_2_icon.png") no-repeat;
+  background-size: contain;
+}
+.election-day .counter {
+  color: transparent;
+  font-size: 30px;
+  line-height: 1.07;
+  font-family: "ChosunMGothicBold", sans-serif;
+  font-weight: bold;
+  background: linear-gradient(to bottom, #ffffff 49%, #d8d8d8 96%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@media only screen and (max-width: 767px) {
+  .election-2022 {
+    background: url("//image.chosun.com/arc/election2022_2_m_bg.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .election-wrap {
+    height: 72px;
+  }
+  .election-title .election-logo {
+    width: 50px;
+    height: 33px;
+    margin: 0 8px 0 0;
+  }
+  .election-title strong {
+    font-size: 20px;
+  }
+  .election-counter .dday {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+  .election-day .election-icon {
+    display: none;
+  }
+  .election-day .counter {
+    font-size: 24px;
+    line-height: 1;
+  }
+}
