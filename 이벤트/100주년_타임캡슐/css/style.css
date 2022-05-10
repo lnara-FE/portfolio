@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+@import url("//news.chosun.com/dhtm/css/css_reset_2018.css");
+@import url("//news.chosun.com/dhtm/css/cs_webfont_set.css");
+
+/*common*/
+body, input, button, textarea {/* color: #000;  */font: 18px/1.3 '조선고딕', '맑은 고딕', 'Malgun Gothic', 나눔고딕, 돋움, Dotum, 굴림, Gulim, 'Apple SD Gothic Neo', sans-serif; letter-spacing: normal;}
+a, a:hover,a:visited {text-decoration: none;}
+/* body::-webkit-scrollbar { display: none;}
+body {-ms-overflow-style: none; } */
+
+#nav2020-head {position: absolute !important; z-index: 99;}
+#footer2020 {position: relative; z-index: 99;}
+#wrap {background: #eaeaea; overflow: hidden;}
+h1, h3, h4 {font-family: '조선중간고딕';}
+
+.title {width: 100%; min-height: 720px; background: url(../image/bg-title.png)no-repeat; background-size: cover; background-position: center; word-break: keep-all;}
+.title-inner {max-width: 640px; padding-top: 112px; margin: 0 auto; text-align: center;}
+.title-inner h2 {padding-top: 90px; padding-bottom: 24px; text-align: center; background: url(../image/ic-letter.png)no-repeat; background-size: 136px 112px; background-position: center top;}
+.title-inner p {padding-bottom: 12px; color: #fff; line-height: 1.6;} 
+
+.content {position: relative; max-width: 1060px; margin: 0 auto; word-break: keep-all;}
+.content-inner {margin-top: -198px; padding: 90px 110px 72px; background: #fff; box-sizing: border-box;}
+.content-inner h3 {position: absolute; top: -60px; left: 50%; transform: translateX(-50%); width: 120px; height: 120px; padding: 37px 27px; background: #64e8fa; font-size: 18px; text-align: center; border-radius: 100%; box-sizing: border-box;}
+.content-inner p.cont-desc {color: #666; line-height: 1.6;}
+.content-inner p.cont-desc>a {color: #3d64e3; text-decoration: underline;}
+
+.apply-info {position: relative; display: flex; justify-content: space-between; align-items: center; width: 100%; height: 100px; margin: 22px auto 46px; padding: 0 32px; background: #f6f6f6; box-sizing: border-box;}
+.apply-info dl {overflow: hidden;}
+.apply-info dl dt {float: left; margin-right: 16px; font-family: '조선중간고딕';}
+.apply-info dl dd {float: left;}
+.apply-info .capsule-info span {display: inline-block; max-width: 134px; margin-right: 127px; color: #666; font-size: 12px; overflow: hidden;}
+.apply-info .capsule-info span::before {content: ''; float: right; display: block; width: 9px; height: 24px; background: url(../image/ic-arrow.svg)no-repeat; background-size: contain;}
+.apply-info .capsule-info img {position: absolute; top: -18px; right: 48px; width: 107px; height: 137px;}
+
+.apply-list { display: flex; flex-direction: column; margin-bottom: 60px; word-break: keep-all;}
+.apply-list h4 {margin-bottom: 12px; line-height: 1.5; font-size: 23px; text-align: center;}
+.apply-list ol {display: flex; justify-content: center; margin: 0 auto; text-align: center; overflow: hidden;}
+.apply-list ol li {display: flex; justify-content: center; align-items: center; flex-direction: column; width: 200px; height: 200px; padding: 0 16px; background: #f6f6f6; font-family: '조선중간고딕'; text-align: center; border-radius: 100%; box-sizing: border-box;} 
+.apply-list ol li+li {margin-left: 20px;}
+.apply-list ol li span {color: #64e8fa; font-family: 'Apple SD Gothic Neo', '조선중간고딕', '맑은 고딕'; font-weight: bold;}
+.apply-list ol li p {max-width: 140px; margin: 0 auto}
+.apply-list ol li p.apply-list-item.info {max-width: 100%; margin-top: 8px; font-size: 15px; font-family: '조선고딕';}
+
+.apply-type {display: flex; overflow: hidden; word-break: keep-all;}
+.apply-type>div + div {margin-left: 4.76%;}
+.apply-type .apply-type-item {width: calc((100% - 4.76%)/2);}
+.apply-type .apply-type-item h4 {display: flex; justify-content: flex-start; align-items: center; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #222; line-height: 1.5; font-size: 23px; overflow: hidden;} 
+.apply-type .apply-type-item h4::before {content: ''; position: relative; top: 2px; display: block; margin-right: 8px; width: 24px; height: 35px;}
+.apply-type .apply-type-item.left h4::before {background: url(../image/ic-box.svg)no-repeat; background-size: contain;}
+.apply-type .apply-type-item.right h4::before {background: url(../image/ic-photo.svg)no-repeat; background-size: contain;}
+.apply-type .apply-type-item .top {min-height: 187px; color: #444;}
+.apply-type .apply-type-item dl {margin: 20px auto 28px;}
+.apply-type .apply-type-item dl dt {margin-bottom: 8px; font-family: '조선중간고딕'; line-height: 1.5;}
+.apply-type .apply-type-item dl dd>a {text-decoration: underline; color: #3d64e3;}
+.apply-type .apply-type-item .bottom {width: 100%; padding: 20px 16px; background: #f6f6f6; color: #707070; font-size: 15px; box-sizing: border-box;}
+.apply-type .apply-type-item .check-tit {display: flex; justify-content: flex-start; align-items: center; margin-bottom: 8px; color: #999; font-size: 15px; font-family: '조선중간고딕';}
+.apply-type .apply-type-item .check-tit::before {content: ''; display: block; width: 18px; height: 23px; margin-right: 4px; background: url(../image/ic-warning.svg)no-repeat; background-size: contain;}
+.apply-type .apply-type-item .check-list li {font-size: 15px;}
+.apply-type .apply-type-item .check-list li+li {margin-top: 4px;}
+.apply-type .apply-type-item .check-list li a.more {text-decoration: underline; color: #4e76df;}
+
+.popup {position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; display: none;}
+.popup.show {display: block;}
+.popup .popup-inner {position: relative; width: 100%; height: 100%;}
+.popup .popup-inner .popup-cont {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); max-width: 650px; padding: 68px 60px 100px; background: #fff; box-sizing: border-box;}
+.popup .popup-inner .popup-cont h1 {padding-bottom: 20px; font-size: 23px; text-align: center;} 
+.popup .popup-inner .popup-cont p {color: #707070; font-size: 15px; line-height: 1.5;}
+.close {position: absolute; top: 16px; right: 16px; display: inline-block; width: 32px; height: 32px;}
+.close>img {display: block; max-width: 100%;}
+.pop-bg {position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(34, 34, 34, 0.2); z-index: 999; display: none;}
+.pop-bg.show {display: block;}
+
+.notice {padding: 16px 0 60px; color: #999; font-size: 15px;}
+.notice li {line-height: 1.5;}
+
+@media all and (max-width: 959px){
+    body, input, button, textarea {font-size: 17px;}
+
+    .title {min-height: 456px;}
+    .title-inner {padding: 108px 20px 0;}
+    .title-inner h2 {width: 100%; padding-top: 56px; padding-bottom: 16px; background-size: 92px 75px;}
+    .title-inner h2 img {display: block; width: 100%;}
+
+    .content-inner {margin-top: 0; padding: 80px 20px 48px;}
+
+    .apply-info {display: block; height: auto; margin: 20px auto 75px; padding: 20px 16px;}
+    .apply-info dl {margin-bottom: 48px;}
+    .apply-info dl dt {float: none; margin-bottom: 4px;}
+    .apply-info dl dd {float: none; max-width: 288px;}
+    .apply-info .capsule-info {position: relative; text-align: right; padding-right: 107px;}
+    .apply-info .capsule-info span {max-width: 140px; margin-right: 0; margin-left: 27px; text-align: left;}
+    .apply-info .capsule-info span::before {position: relative; left: -8px; top: -2px;}
+    .apply-info .capsule-info img {top: -48px; right: 0;}
+
+    .apply-list {margin-bottom: 55px;}
+    .apply-list h4 {margin-bottom: 16px; font-size: 20px;}
+    .apply-list ol {display: block; max-width: 320px; overflow: hidden;}
+    .apply-list ol li {float: left; width: 150px; height: 150px; margin: 0 auto; padding: 0 10px;}
+    .apply-list ol li:first-child {float: none;}
+    .apply-list ol li:nth-child(2) {margin-left: 0;}
+    .apply-list ol li p.apply-list-item.info {font-size: 14px;}
+
+    .apply-type {display: block;}
+    .apply-type>div + div {margin-left: 0; margin-top: 55px;}
+    .apply-type .apply-type-item {width: 100%;}
+    .apply-type .apply-type-item h4 {font-size: 20px;}
+    .apply-type .apply-type-item h4::before {width: 23px;}
+    .apply-type .apply-type-item .top {min-height: unset;}
+    .apply-type .apply-type-item dl {margin: 16px auto 20px;}
+    .apply-type .apply-type-item .bottom {padding: 16px 12px;}
+    .apply-type .apply-type-item .check-list li {font-size: 14px;}
+
+    .popup .popup-inner .popup-cont {width: calc(100% - 40px); padding: 53px 20px 56px;}
+    .popup .popup-inner .popup-cont h1 {padding-bottom: 16px; font-size: 20px;}
+    .close {top: 12px; right: 12px; width: 25px; height: 25px;}
+
+    .notice {padding: 20px 20px 48px; word-break: break-all;}
+}
