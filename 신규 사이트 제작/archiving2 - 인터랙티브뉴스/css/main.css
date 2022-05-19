@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+@import url('//news.chosun.com/dhtm/css/css_reset_2018.css');
+@import url('//cbiz.chosun.com/dhtm/css/cbiz_font_set_min.css');
+@import url('//fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+@import url('//cbiz.chosun.com/interactive/antarctica/css/jquery.scrollbar.css');
+@import url('//cbiz.chosun.com/interactive/archiving/css/share.css');
+
+
+/*common*/
+body, input, button, textarea {color: #222; font: 15px/1.33 '조선고딕', '맑은 고딕', 'Malgun Gothic', 나눔고딕, 돋움, Dotum, 굴림, Gulim, 'Apple SD Gothic Neo', sans-serif; letter-spacing: normal;}
+a, a:hover,a:visited {color: #222; text-decoration: none;}
+
+
+#wrap {width: 100%; height: auto; overflow: hidden;}
+header {position: absolute; top: 0; left: 0; width: 100%; z-index: 1;}
+footer {position: absolute; left: 0; bottom: 0; width: 100%; display: none;} 
+footer.show {display: block;}
+
+
+.intro-title {background: #232f2f;}
+.intro-title .intro-title-inner {margin: 0 auto; text-align: center;}
+h2.logo {position: relative; width: 38.02%; margin: 0 auto; z-index: 9;}
+h2.logo>img {display: block; width: 100%; height: 100%; font-size: 0; line-height: 0;}
+.intro-desc p {position: relative; max-width: 720px; margin: -60px auto 0; color: #fff; font-size: 18px; line-height: 1.78; word-break: keep-all; z-index: 9;}
+.intro-desc .close-btn {display: none;}
+video {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%; width: auto; height: auto; opacity: 0.25; object-fit: cover;}
+.scroll-icon {position: absolute; bottom: 43px; left: 50%; transform: translateX(-50%);}
+.scroll-icon .scroll-txt {color: #fff; font-family: 'Noto Sans KR'; font-size: 14px; line-height: 0.86;}
+.scroll-icon .scroll-txt:after {content: ''; position: relative; bottom: 0; display: block; width: 30px; height: 15px; margin: 20px auto 0; background: url(../image/ic-scroll-arrow.svg)no-repeat; background-size: cover; -webkit-animation: icon-bounce .4s infinite alternate; animation: icon-bounce .5s infinite alternate;}
+
+/*스크롤 화살표 아이콘*/
+@keyframes icon-bounce {
+    100% { bottom: 10px; }
+} 
+
+
+/*설명글 모바일 팝업*/
+a.info-btn {display: none} /*설명글 모바일 팝업 버튼*/
+.intro-desc .close_btn {display: none;} /*설명글 모바일 팝업 닫기 버튼*/
+
+
+.lc-content {position: relative; width: 100%; background: #fff; z-index: 9;}
+.lc-content .fp-tableCell {vertical-align: top;}
+
+
+/*지역명 네비게이션*/
+.lc-nav {line-height: 102px;}
+.lc-nav-inner {display: flex; justify-content: space-between; align-items: center; max-width: 1250px; margin: 0 auto;}
+.lc-nav-inner h3 {font-size: 23px; font-family: '조선중간고딕';}
+.lc-nav-inner h3::before {content: ''; display: inline-block; width: 15px; height: 21px; margin-right: 10px; background: url(../image/ic-location-g.svg)no-repeat; background-size: contain;} 
+.lc-nav-inner .swiper-container {margin: 0;}
+.lc-nav-list {display: flex;}
+.lc-nav-list li {font-size: 23px; line-height: 1.39; cursor: pointer;}
+.lc-nav-list li.on {color: #14a185; font-family: '조선중간고딕';}
+.lc-nav-list li+li {margin-left: 30px;}
+.lc-nav-list li.swiper-slide {width: auto;}
+
+
+/*지도*/
+.lc-map {padding-top: 35px; background: #e5f1ef;}
+.lc-map-inner {position: relative; display: flex; max-width: 1240px; margin: 0 auto; }
+.lc-map-cont {position: relative; width: 29.03%;}
+a.btn {position: absolute; display: inline-block; width: 58px; height: 58px; font-size: 0; line-height: 0; z-index: 999;}
+a.refresh_ic {right: 0; top: 535px; background: url('../image/bt-refresh.svg') no-repeat; background-size: contain;}
+a.top_ic {right: -80px; bottom: 100px; background: url('../image/bt-main-top.svg') no-repeat; background-size: contain;}
+a.share_ic {right: -80px; bottom: 35px; background: url('../image/bt-main-share.svg') no-repeat; background-size: contain;}
+               
+a.home_ic {position: absolute; display: inline-block; left: 0; bottom: 35px; padding: 10px 20px; color: #14a185; font-size: 18px; line-height: 1.44; font-family: '조선중간고딕'; text-align: center; background: #fff; border-radius: 24px; border: 1px solid #14a185;}
+
+/*썸네일 기사 리스트*/
+.lc-map-list {position: relative; top: 0; width: 65.33%; height: calc(100vh - 197px); margin-left: 5.64%;} /*상단 지역 네비(102), 리스트 상단 간격(35px), footer(60)=197px*/
+.lc-map-list>ul {position: relative; overflow: hidden;}
+.lc-map-list-wrap li {position: relative; float: left; width: 46.91%; height: 225px; margin-bottom: 20px; text-align: center; box-sizing: border-box; overflow: hidden; z-index: 9;}
+.lc-map-list-wrap li.on {border: 4px solid #27c7a7; transition: all ease .3s;}
+.lc-map-list-wrap li:nth-child(2n) {margin-left: 2.44%;}
+.lc-map-list-wrap li:nth-child(9), .lc-map-list-wrap li:nth-child(10) {margin-bottom: 0;}
+.lc-map-list-wrap li::before {content: ''; position: absolute; top: 0; left: 0; display: block; width: 100%; height: 100%; background: rgba(34, 34, 34, 0.6); z-index: 99;}
+.lc-map-list-wrap li.yet::before {background: rgba(215, 215, 215, 0.85);}
+.lc-map-list-wrap li>a {position: relative; display: flex; flex-direction: column; justify-content: center; width: 100%; height: 100%; padding: 0 50px; box-sizing: border-box; z-index: 999;}
+.lc-map-list-wrap li>img {position: absolute; top: 0; left: 0; display: block; width: 100%; height: 225px; z-index: 9;}
+.lc-map-list-wrap li p.title {color: #fff; font-size: 23px; font-family: '조선중간고딕'; line-height: 1.39; word-break: keep-all;}
+.lc-map-list-wrap li p.title.yet {color: #333; display: none;}
+
+
+.lc-map-list-wrap li .label {margin: 0 auto 5px; padding: 4px 10px; color: #fff; font-family: '조선중간고딕'; border-radius: 14px; box-sizing: border-box; display: none;}
+.lc-map-list-wrap li .label.new {background: #14a185;}
+.lc-map-list-wrap li .label.yet {background: #333;}
+
+
+.lc-map-list-wrap li.yet {pointer-events: none;}
+.lc-map-list-wrap li.yet p.title {display: none;}
+.lc-map-list-wrap li.yet p.title.yet {display: block;}
+.lc-map-list-wrap li.yet .label.yet {display: inline-block;}
+.lc-map-list-wrap li.new .label.new {display: inline-block;}
+
+
+_:-ms-input-placeholder,:root .lc-map-list-wrap li .label {width: 88px;} /*IE에서만 label 고정값 적용*/
+/*썸네일 기사 리스트 스크롤바 커스텀*/
+.scrollbar-inner > .scroll-element .scroll-bar, .scrollbar-inner > .scroll-element:hover .scroll-bar {background-color: #bed0cd;}
+.scrollbar-inner > .scroll-element.scroll-y {width: 10px;}
+
+/*
+ - 오픈전: 컬러:#999, 공개예정 label 보이기
+ - 오픈후: 컬러:#14a185, 공게예정 label 숨기기
+*/
+.pin {animation: icon-bounce .45s ease infinite alternate; cursor: pointer;}
+.pin .pin-label {display: none;}
+
+.pin.yet .pin-shape {fill: #999 !important;}
+.pin.yet .pin-txt {fill: #999 !important;}
+.pin.yet .pin-label.yet-label {display: block;}
+
+.pin.new .pin-label.new-label {display: block;}
+
+.land {cursor: pointer;}
+
+@keyframes icon-bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+}
+
+
+@media (max-width: 1440px)  {
+    .intro-title .scroll-icon {bottom: 15px;}
+    
+    .lc-map-cont svg {height: 500px;}
+    a.refresh_ic {top: 442px;}
+    a.home_ic {left: 20px}
+    a.top_ic {right: 20px;}
+    a.share_ic {right: 20px;}
+}
+
+
+@media (max-width: 959px) {
+    body, input, button, textarea {font: 16px/1.5 '조선고딕', '맑은 고딕', 'Malgun Gothic', 나눔고딕, 돋움, Dotum, 굴림, Gulim, 'Apple SD Gothic Neo', sans-serif; letter-spacing: normal;}
+    footer {position: relative;}
+
+    h2.logo {width: 100%;}
+    .intro-title .scroll-icon {bottom: 43px;}
+
+    /*설명글 모바일 팝업*/
+    a.info-btn {position: relative; display: inline-block; color: #fff; font-size: 16px; line-height: 1.5; z-index: 9;}
+    a.info-btn:after {content: ''; display: inline-block; width: 14px; height: 14px; margin: -2px; margin-left: 5px; background: url('../image/ic-service.svg') no-repeat; background-size: contain;}
+
+
+    .intro-desc {position: absolute; top: 50%; left:50%; transform: translate(-50%, -50%); width: calc(100% - 40px); max-width: 100%; margin: 0; padding: 68px 20px; color: #222; background: rgba(255, 255, 255, 0.95); box-sizing: border-box; z-index: 9; display: none;}
+    .intro-desc p {margin: 0 auto; color: #222; font-size: 17px; line-height: 1.53; text-align: left;}
+    .intro-desc .close-btn {position: absolute; top: 10px; right: 10px; display: inline-block; width: 28px; height: 28px;}
+
+
+    .lc-nav {line-height: 1.5;}
+    .lc-nav-inner {flex-direction: column; align-items: flex-start; padding: 30px 0 20px;}
+    .lc-nav-inner h3 {display: flex; justify-content: center; align-items: center; margin: 0 20px 15px; font-size: 16px;}
+    .lc-nav-inner h3::before {width: 19px; height: 24px; margin-right: 5px;}
+    .lc-nav-list li {font-size: 16px; line-height: 1.5; text-align: center; box-sizing: border-box;}
+    .lc-nav-list li+li {margin-left: 0;}
+    .lc-nav-list li span {padding: 0 10px;}
+    .lc-nav-list li:first-child span {padding-left: 20px;}
+    .lc-nav-list li:last-child span {padding-right: 20px;}
+    
+
+    .lc-map {padding-top: 20px;}
+    .lc-map-cont {display: none;}
+    a.btn {width: 53px; height: 53px;}
+    a.top_ic {bottom: 190px;}
+    a.share_ic {bottom: 130px;}
+
+    a.home_ic {position: relative; bottom: unset; left: 50%; transform: translateX(-50%); margin: 10px auto 20px;}
+
+
+    .lc-map-list {width: 100%; height: calc(100vh - 133px); margin-left: 0;}
+    .lc-map-list-wrap li {float: none; width: 100%; height: 203px; margin-bottom: 10px;}
+    .lc-map-list-wrap li:nth-child(2n) {margin-left: 0;}
+    .lc-map-list-wrap li:nth-child(9), .lc-map-list-wrap li:nth-child(10) {margin-bottom: 10px;}
+    .lc-map-list-wrap li p.title {font-size: 24px; line-height: 1.42;}
+
+
+    .scrollbar-inner > .scroll-element.scroll-y {width: 0;}
+}
